@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/level_buttons_grid.gd" id="2_bcfnv"]
 
 [node name="LevelSelection" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

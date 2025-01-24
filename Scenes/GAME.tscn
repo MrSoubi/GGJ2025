@@ -1,24 +1,58 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnj5ko8x6ace8"]
+[gd_scene load_steps=16 format=3 uid="uid://cnj5ko8x6ace8"]
 
 [ext_resource type="Script" path="res://Scripts/game_initializer.gd" id="1_hfhqi"]
 [ext_resource type="Script" path="res://Scripts/LevelDefinitions/level_definition.gd" id="2_8rtuw"]
 [ext_resource type="PackedScene" uid="uid://d31cs2fvr1s4e" path="res://Scenes/UI/main_menu.tscn" id="2_lm705"]
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_1.tscn" id="3_1p5cw"]
 [ext_resource type="PackedScene" uid="uid://dyrhu210phwla" path="res://Scenes/UI/level_selection.tscn" id="3_4ea6p"]
+[ext_resource type="PackedScene" uid="uid://dxx0tgolf3un3" path="res://Scenes/Levels/level_2.tscn" id="4_4nafv"]
 [ext_resource type="PackedScene" uid="uid://b0vck1a8wagxx" path="res://Scenes/UI/pause_menu.tscn" id="4_42c4y"]
+[ext_resource type="PackedScene" uid="uid://diaowjqum6mrj" path="res://Scenes/Levels/level_3.tscn" id="5_pbso4"]
+[ext_resource type="PackedScene" uid="uid://bmd1h8wvtxugg" path="res://Scenes/Levels/level_4.tscn" id="6_8kywj"]
+[ext_resource type="PackedScene" uid="uid://i8vliuktyvfw" path="res://Scenes/Levels/level_5.tscn" id="7_a25gy"]
 
 [sub_resource type="Resource" id="Resource_co6qe"]
 script = ExtResource("2_8rtuw")
 index = 1
 level = ExtResource("3_1p5cw")
+available = true
+
+[sub_resource type="Resource" id="Resource_2vgm8"]
+script = ExtResource("2_8rtuw")
+index = 2
+level = ExtResource("4_4nafv")
+available = false
+
+[sub_resource type="Resource" id="Resource_wdga3"]
+script = ExtResource("2_8rtuw")
+index = 3
+level = ExtResource("5_pbso4")
+available = false
+
+[sub_resource type="Resource" id="Resource_lf5aa"]
+script = ExtResource("2_8rtuw")
+index = 4
+level = ExtResource("6_8kywj")
+available = false
+
+[sub_resource type="Resource" id="Resource_rw2dw"]
+script = ExtResource("2_8rtuw")
+index = 5
+level = ExtResource("7_a25gy")
+available = false
 
 [node name="Node" type="Node"]
+process_mode = 3
 script = ExtResource("1_hfhqi")
-levels = Array[ExtResource("2_8rtuw")]([SubResource("Resource_co6qe")])
+levels = Array[ExtResource("2_8rtuw")]([SubResource("Resource_co6qe"), SubResource("Resource_2vgm8"), SubResource("Resource_wdga3"), SubResource("Resource_lf5aa"), SubResource("Resource_rw2dw")])
+
+[node name="Levels" type="Node" parent="."]
 
 [node name="MainMenu" parent="." instance=ExtResource("2_lm705")]
+z_index = 1
 
 [node name="LevelSelection" parent="." instance=ExtResource("3_4ea6p")]
+z_index = 1
 
 [node name="PauseMenu" parent="." instance=ExtResource("4_42c4y")]
 
@@ -27,3 +61,5 @@ levels = Array[ExtResource("2_8rtuw")]([SubResource("Resource_co6qe")])
 [connection signal="button_settings_pressed" from="MainMenu" to="." method="_on_main_menu_button_settings_pressed"]
 [connection signal="button_go_back_to_main_menu_pressed" from="LevelSelection" to="." method="_on_level_selection_button_go_back_to_main_menu_pressed"]
 [connection signal="level_selected" from="LevelSelection" to="." method="_on_level_selection_level_selected"]
+[connection signal="resume_button_pressed" from="PauseMenu" to="." method="_on_pause_menu_resume_button_pressed"]
+[connection signal="to_main_menu_button_pressed" from="PauseMenu" to="." method="_on_pause_menu_to_main_menu_button_pressed"]
