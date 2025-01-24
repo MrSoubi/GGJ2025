@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dyrhu210phwla"]
+[gd_scene load_steps=2 format=3 uid="uid://dyrhu210phwla"]
+
+[ext_resource type="Script" path="res://Scripts/UI/level_selection.gd" id="1_6qj4i"]
 
 [node name="LevelSelection" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6qj4i")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -16,29 +19,167 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
 theme_override_constants/separation = 100
 
-[node name="Header" type="CenterContainer" parent="TextureRect/VBoxContainer"]
+[node name="Header" type="CenterContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="LabelTitle" type="Label" parent="TextureRect/VBoxContainer/Header"]
+[node name="LabelTitle" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 text = "LEVEL SELECTION"
 
-[node name="Body" type="CenterContainer" parent="TextureRect/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
 
-[node name="Footer" type="CenterContainer" parent="TextureRect/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 4
+
+[node name="ButtonLevel" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 1"
+
+[node name="ButtonLevel2" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 2"
+
+[node name="ButtonLevel3" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 3"
+
+[node name="ButtonLevel4" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 4"
+
+[node name="ButtonLevel5" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 5"
+
+[node name="ButtonLevel6" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 6"
+
+[node name="ButtonLevel7" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 7"
+
+[node name="ButtonLevel8" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 8"
+
+[node name="ButtonLevel9" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 9"
+
+[node name="ButtonLevel10" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 10"
+
+[node name="ButtonLevel11" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 11"
+
+[node name="ButtonLevel12" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 12"
+
+[node name="ButtonLevel13" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 13"
+
+[node name="ButtonLevel14" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 14"
+
+[node name="ButtonLevel15" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 15"
+
+[node name="ButtonLevel16" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 16"
+
+[node name="ButtonLevel17" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 17"
+
+[node name="ButtonLevel18" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 18"
+
+[node name="ButtonLevel19" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 19"
+
+[node name="ButtonLevel20" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Level 20"
+
+[node name="Footer" type="CenterContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="ButtonExit" type="Button" parent="TextureRect/VBoxContainer/Footer"]
+[node name="ButtonExit" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Footer"]
 layout_mode = 2
 text = "GO BACK TO MAIN MENU"
+
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/Footer/ButtonExit" to="." method="_on_button_exit_pressed"]
