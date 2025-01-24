@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd3xx7tbujps7"]
+
+[ext_resource type="Script" path="res://Scripts/Props/bubble_spawner.gd" id="1_7n47c"]
+
+[node name="BubbleSpawner" type="Node2D"]
+script = ExtResource("1_7n47c")
+
+[node name="DebugLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "🫧🏁BubbleSpawner"

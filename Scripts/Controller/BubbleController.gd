@@ -1,3 +1,4 @@
+class_name BubbleController
 extends RigidBody2D
 
 @export var breathForce : float

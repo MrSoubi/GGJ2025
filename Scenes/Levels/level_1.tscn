@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6tpbfe7iim2i"]
+[gd_scene load_steps=9 format=3 uid="uid://c6tpbfe7iim2i"]
 
 [ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="1_a5u7y"]
+[ext_resource type="PackedScene" uid="uid://ct37jifcrdty2" path="res://Scenes/Props/level_goal.tscn" id="3_epthy"]
+[ext_resource type="PackedScene" uid="uid://dd3xx7tbujps7" path="res://Scenes/Props/bubble_spawner.tscn" id="3_st03q"]
 
 [sub_resource type="Animation" id="Animation_lxrkl"]
 resource_name = "Level1_Loop"
@@ -133,6 +135,7 @@ libraries = {
 autoplay = "Level1_Loop"
 
 [node name="Props" type="Node2D" parent="."]
+position = Vector2(1861, 230)
 
 [node name="Blocker" parent="Props" instance=ExtResource("1_a5u7y")]
 position = Vector2(974, 876)
@@ -165,3 +168,9 @@ offset_bottom = 23.0
 grow_horizontal = 2
 text = "LEVEL 1"
 label_settings = SubResource("LabelSettings_orxr1")
+
+[node name="LevelGoal" parent="." instance=ExtResource("3_epthy")]
+position = Vector2(1699, 483)
+
+[node name="BubbleSpawner" parent="." instance=ExtResource("3_st03q")]
+position = Vector2(513, 498)
