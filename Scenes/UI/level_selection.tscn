@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dyrhu210phwla"]
+[gd_scene load_steps=2 format=3 uid="uid://dyrhu210phwla"]
+
+[ext_resource type="Script" path="res://Scripts/UI/level_selection.gd" id="1_6qj4i"]
 
 [node name="LevelSelection" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6qj4i")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -178,3 +181,5 @@ layout_mode = 2
 [node name="ButtonExit" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Footer"]
 layout_mode = 2
 text = "GO BACK TO MAIN MENU"
+
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/Footer/ButtonExit" to="." method="_on_button_exit_pressed"]

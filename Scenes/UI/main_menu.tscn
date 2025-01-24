@@ -1,4 +1,38 @@
-[gd_scene format=3 uid="uid://d31cs2fvr1s4e"]
+[gd_scene load_steps=5 format=3 uid="uid://d31cs2fvr1s4e"]
+
+[ext_resource type="Script" path="res://Scripts/UI/main_menu.gd" id="1_3sp0j"]
+
+[sub_resource type="GDScript" id="GDScript_10vh1"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_0jscs"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_ecpc7"]
+script/source = "extends Button
+"
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,6 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3sp0j")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -49,14 +84,17 @@ layout_mode = 2
 [node name="ButtonPlay" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer"]
 layout_mode = 2
 text = "PLAY"
+script = SubResource("GDScript_10vh1")
 
 [node name="ButtonSettings" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer"]
 layout_mode = 2
 text = "SETTINGS"
+script = SubResource("GDScript_0jscs")
 
 [node name="ButtonExit" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer"]
 layout_mode = 2
 text = "EXIT"
+script = SubResource("GDScript_ecpc7")
 
 [node name="Footer" type="CenterContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -64,3 +102,7 @@ layout_mode = 2
 [node name="LabelCredits" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Footer"]
 layout_mode = 2
 text = "CREDITS"
+
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer/ButtonSettings" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer/ButtonExit" to="." method="_on_button_exit_pressed"]
