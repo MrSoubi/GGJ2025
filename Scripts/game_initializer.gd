@@ -56,6 +56,9 @@ func go_to_next_level() -> void:
 		next_level_definition.available = true
 		start_level(next_level_definition)
 
+func launch_starting_cinematic():
+	pass
+
 func handle_end_game():
 	pass
 
