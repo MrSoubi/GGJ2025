@@ -1,12 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnj5ko8x6ace8"]
+[gd_scene load_steps=8 format=3 uid="uid://cnj5ko8x6ace8"]
 
 [ext_resource type="Script" path="res://Scripts/game_initializer.gd" id="1_hfhqi"]
+[ext_resource type="Script" path="res://Scripts/LevelDefinitions/level_definition.gd" id="2_8rtuw"]
 [ext_resource type="PackedScene" uid="uid://d31cs2fvr1s4e" path="res://Scenes/UI/main_menu.tscn" id="2_lm705"]
+[ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_1.tscn" id="3_1p5cw"]
 [ext_resource type="PackedScene" uid="uid://dyrhu210phwla" path="res://Scenes/UI/level_selection.tscn" id="3_4ea6p"]
 [ext_resource type="PackedScene" uid="uid://b0vck1a8wagxx" path="res://Scenes/UI/pause_menu.tscn" id="4_42c4y"]
 
+[sub_resource type="Resource" id="Resource_co6qe"]
+script = ExtResource("2_8rtuw")
+index = 1
+level = ExtResource("3_1p5cw")
+
 [node name="Node" type="Node"]
 script = ExtResource("1_hfhqi")
+levels = Array[ExtResource("2_8rtuw")]([SubResource("Resource_co6qe")])
 
 [node name="MainMenu" parent="." instance=ExtResource("2_lm705")]
 
@@ -18,3 +26,4 @@ script = ExtResource("1_hfhqi")
 [connection signal="button_play_pressed" from="MainMenu" to="." method="_on_main_menu_button_play_pressed"]
 [connection signal="button_settings_pressed" from="MainMenu" to="." method="_on_main_menu_button_settings_pressed"]
 [connection signal="button_go_back_to_main_menu_pressed" from="LevelSelection" to="." method="_on_level_selection_button_go_back_to_main_menu_pressed"]
+[connection signal="level_selected" from="LevelSelection" to="." method="_on_level_selection_level_selected"]
