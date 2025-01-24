@@ -4,15 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://cw5e2wyrxhq1q" path="res://icon.svg" id="2_8get5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qmstj"]
+radius = 28.0064
 
-[node name="Node2D" type="Node2D"]
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_l8nui")
+breathForce = 60.0
+maxBreathDist = 300.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_qmstj")
 
-[node name="Icon" type="Sprite2D" parent="RigidBody2D"]
-scale = Vector2(0.140625, 0.140625)
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("2_8get5")
