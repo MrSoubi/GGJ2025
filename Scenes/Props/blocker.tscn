@@ -12,6 +12,7 @@ size = Vector2(124, 126)
 [node name="Blocker" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_interpolation_mode = 1
 physics_material_override = SubResource("PhysicsMaterial_gtqhb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
