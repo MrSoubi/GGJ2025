@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bbksualrwnc45"]
 
-[ext_resource type="PackedScene" uid="uid://dba2pces21qaw" path="res://Scenes/Controller/Controller.tscn" id="1_vebxd"]
+[ext_resource type="PackedScene" uid="uid://dba2pces21qaw" path="res://Scenes/Controller/Bubble.tscn" id="1_vebxd"]
 
 [node name="ControllerTest" type="Node2D"]
 
