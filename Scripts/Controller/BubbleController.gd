@@ -9,6 +9,8 @@ var distFromMouse : float
 
 var canMove : bool
 
+const RSE_ON_PLAYER_DEATH = preload("res://Data/RSE_OnPlayerDeath.tres")
+
 func _process(delta: float) -> void:
 	mousePos = get_global_mouse_position()
 	distFromMouse = mousePos.distance_to(position)
