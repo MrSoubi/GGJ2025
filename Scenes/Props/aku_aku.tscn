@@ -172,14 +172,14 @@ _data = {
 radius = 314.916
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ykqqa"]
-radius = 66.3702
+radius = 14.0357
 
 [node name="Aku-Aku" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_yu54m")
 
 [node name="Head" type="Node2D" parent="."]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.5, 0.5)
 
 [node name="Head" type="Sprite2D" parent="Head"]
 position = Vector2(-129, -71)
@@ -195,7 +195,7 @@ polygon = PackedVector2Array(82.1167, 30.2476, -0.195671, 14.4468, 52.2589, -140
 
 [node name="Jaw" type="Node2D" parent="."]
 rotation = -0.426836
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.5, 0.5)
 
 [node name="Jaw" type="Sprite2D" parent="Jaw"]
 position = Vector2(-130, -68)
