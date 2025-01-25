@@ -10,7 +10,7 @@ size = Vector2(122, 120)
 [node name="Ventilateur" type="Area2D"]
 scale = Vector2(5, 1)
 script = ExtResource("1_jqv5w")
-force = 20.0
+force = 25.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_lkmmc")

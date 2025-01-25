@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dba2pces21qaw"]
+[gd_scene load_steps=20 format=3 uid="uid://bghtut87flilb"]
 
 [ext_resource type="Script" path="res://Scripts/Controller/BubbleController.gd" id="1_bps88"]
 [ext_resource type="Texture2D" uid="uid://hml04ph71ufy" path="res://Textures/FloatingBubble/spr_1.png" id="2_im8h5"]
@@ -13,7 +13,7 @@ friction = 0.0
 bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qmstj"]
-radius = 28.0064
+radius = 14.8014
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3psxh"]
 atlas = ExtResource("2_rl4f6")
@@ -110,9 +110,10 @@ animations = [{
 physics_material_override = SubResource("PhysicsMaterial_arfop")
 gravity_scale = 0.0
 continuous_cd = 2
+linear_damp = 0.2
 script = ExtResource("1_bps88")
-breathForce = 60.0
-maxBreathDist = 300.0
+breathForce = 80.0
+maxBreathDist = 400.0
 max_speed = 400.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -120,6 +121,7 @@ scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_qmstj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.882353)
 scale = Vector2(0.350676, 0.387671)
 sprite_frames = SubResource("SpriteFrames_6veoy")
 autoplay = "default"
