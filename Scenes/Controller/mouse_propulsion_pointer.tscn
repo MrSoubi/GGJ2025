@@ -1,0 +1,111 @@
+[gd_scene load_steps=18 format=3 uid="uid://bk6g6ibegcxj6"]
+
+[ext_resource type="Script" path="res://Scripts/Controller/mouse_propulsion_pointer.gd" id="1_etp5d"]
+[ext_resource type="Texture2D" uid="uid://d0ma5eppbwgnd" path="res://Textures/mouse_propulsion_pointer_anim.png" id="2_pe0od"]
+[ext_resource type="PackedScene" uid="uid://2hw3q25jaeqf" path="res://Particles/Wind/ventilation_particles.tscn" id="3_xhv8c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1v0k"]
+atlas = ExtResource("2_pe0od")
+region = Rect2(0, 0, 210, 141)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehh6h"]
+atlas = ExtResource("2_pe0od")
+region = Rect2(210, 0, 210, 141)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk6vf"]
+atlas = ExtResource("2_pe0od")
+region = Rect2(420, 0, 210, 141)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32xcm"]
+atlas = ExtResource("2_pe0od")
+region = Rect2(630, 0, 210, 141)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i0h5x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1v0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehh6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk6vf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32xcm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_6vlis"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_afkho"]
+gradient = SubResource("Gradient_6vlis")
+
+[sub_resource type="Gradient" id="Gradient_0ehat"]
+offsets = PackedFloat32Array(0, 0.233244, 0.486154, 0.758713, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 0.129412, 0.729412, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_anuy4"]
+gradient = SubResource("Gradient_0ehat")
+
+[sub_resource type="Curve" id="Curve_ufjgo"]
+max_value = 2.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.186969, 2), 0.0, 0.0, 0, 0, Vector2(0.373938, 0.822099), 0.0, 0.0, 0, 0, Vector2(0.606232, 2), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_506yr"]
+curve = SubResource("Curve_ufjgo")
+
+[sub_resource type="Curve" id="Curve_ljo2j"]
+min_value = -40.0
+max_value = 40.0
+_data = [Vector2(0, -0.795578), 0.0, 0.0, 0, 0, Vector2(0.15864, -9.98895), 0.0, 0.0, 0, 0, Vector2(0.359773, 12.9945), 0.0, 0.0, 0, 0, Vector2(0.543909, -20.3315), 0.0, 0.0, 0, 0, Vector2(0.688385, 22.7624), 0.0, 0.0, 0, 0, Vector2(0.883853, -31.8232), 0.0, 0.0, 0, 0, Vector2(1, 40), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="CurveTexture" id="CurveTexture_m1oex"]
+curve = SubResource("Curve_ljo2j")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_r0vta"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(10, 1, 1)
+direction = Vector3(0, 1, 0)
+spread = 20.0
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+gravity = Vector3(0, 0, 0)
+tangential_accel_min = -99.75
+tangential_accel_max = 91.23
+tangential_accel_curve = SubResource("CurveTexture_m1oex")
+damping_max = 30.0
+scale_min = 4.0
+scale_max = 8.0
+scale_curve = SubResource("CurveTexture_506yr")
+color_ramp = SubResource("GradientTexture1D_anuy4")
+color_initial_ramp = SubResource("GradientTexture1D_afkho")
+turbulence_noise_strength = 0.01
+turbulence_noise_scale = 1.0
+
+[node name="MousePropulsionPointer" type="Node2D"]
+script = ExtResource("1_etp5d")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(51.8481, 2.23343)
+rotation = 1.57412
+sprite_frames = SubResource("SpriteFrames_i0h5x")
+frame_progress = 0.920523
+
+[node name="VentilationParticles" parent="." instance=ExtResource("3_xhv8c")]
+position = Vector2(113, 5)
+rotation = 4.69356
+scale = Vector2(8.83808, 5.26566)
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_r0vta")
+lifetime = 1.0
+preprocess = 0.0
+randomness = 0.0
