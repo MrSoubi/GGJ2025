@@ -14,12 +14,14 @@ const RSE_GAME_STARTED = preload("res://Data/RSE_GameStarted.tres")
 const RSE_ENTERED_MAIN_MENU = preload("res://Data/RSE_EnteredMainMenu.tres")
 const RSE_GAME_PAUSED = preload("res://Data/RSE_GamePaused.tres")
 const RSE_GAME_UNPAUSED = preload("res://Data/RSE_GameUnpaused.tres")
+const RSE_ON_PLAYER_DEATH = preload("res://Data/RSE_OnPlayerDeath.tres")
 
 var current_level
 var current_level_index : int
 
 func _ready() -> void:
 	RSE_GOAL_REACHED.triggered.connect(go_to_next_level)
+	RSE_ON_PLAYER_DEATH.triggered.connect(restart_level)
 	main_menu.visible = true
 	level_selection.visible = false
 	pause_menu.visible = false
@@ -35,6 +37,12 @@ func enable_main_menu() -> void:
 	level_selection.visible = false
 	pause_menu.visible = false
 	get_tree().paused = true
+
+func restart_level():
+	transition_layer.transition()
+	await transition_layer.on_transition_finished
+	current_level.queue_free()
+	start_level(get_level_definition_from_index(current_level_index))
 
 func enable_level_selection_menu() -> void:
 	transition_layer.transition()
