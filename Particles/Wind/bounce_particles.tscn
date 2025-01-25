@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cji6t7sxsx4s3"]
+
+[ext_resource type="Texture2D" uid="uid://ddgejvskjvkkh" path="res://Textures/particle_bubble.png" id="1_1mvca"]
+
+[sub_resource type="Curve" id="Curve_425a8"]
+_data = [Vector2(0, 0.420954), 0.0, 0.0, 0, 0, Vector2(0.946372, 1), 0.0, 0.0, 0, 0, Vector2(0.996845, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_mkw6n"]
+curve = SubResource("Curve_425a8")
+
+[sub_resource type="Curve" id="Curve_j8483"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_iot5l"]
+curve = SubResource("Curve_j8483")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6t4ws"]
+particle_flag_disable_z = true
+angle_min = -45.0
+angle_max = 45.0
+velocity_pivot = Vector3(1, 0, 0)
+initial_velocity_min = 84.99
+initial_velocity_max = 84.99
+gravity = Vector3(0, 0, 0)
+scale_min = 0.01
+scale_max = 0.02
+scale_curve = SubResource("CurveTexture_mkw6n")
+turbulence_enabled = true
+turbulence_noise_strength = 0.01
+turbulence_noise_scale = 1.0
+turbulence_influence_over_life = SubResource("CurveTexture_iot5l")
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+emitting = false
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_6t4ws")
+texture = ExtResource("1_1mvca")
+lifetime = 0.6
+one_shot = true
+explosiveness = 0.4
