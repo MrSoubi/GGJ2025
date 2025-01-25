@@ -67,9 +67,6 @@ _data = {
 
 [node name="Level" instance=ExtResource("1_q3rco")]
 
-[node name="Camera2D" parent="." index="1" node_paths=PackedStringArray("target")]
-target = NodePath("")
-
 [node name="Blocker" parent="Props" index="0" instance=ExtResource("2_o33vu")]
 position = Vector2(-987, 47)
 scale = Vector2(2.12, 5.16)
@@ -92,5 +89,24 @@ libraries = {
 }
 autoplay = "BlockerUpDown"
 
+[node name="Blocker5" parent="Props" index="5" instance=ExtResource("2_o33vu")]
+position = Vector2(-412, 868)
+scale = Vector2(26.44, 1)
+
+[node name="Blocker6" parent="Props" index="6" instance=ExtResource("2_o33vu")]
+position = Vector2(-412, -268)
+scale = Vector2(26.44, 1)
+
+[node name="Blocker7" parent="Props" index="7" instance=ExtResource("2_o33vu")]
+position = Vector2(-1814, 312)
+scale = Vector2(1, 11.08)
+
+[node name="Blocker8" parent="Props" index="8" instance=ExtResource("2_o33vu")]
+position = Vector2(1246, 312)
+scale = Vector2(1, 11.08)
+
 [node name="LevelGoal" parent="." index="4"]
-position = Vector2(2802, 510)
+position = Vector2(2692, 523)
+
+[node name="BubbleSpawner" parent="." index="5"]
+position = Vector2(365, 506)

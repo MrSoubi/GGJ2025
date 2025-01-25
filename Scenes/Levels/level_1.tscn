@@ -1,8 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxqkrftsgqmea"]
+[gd_scene load_steps=3 format=3 uid="uid://dxqkrftsgqmea"]
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_7kyw7"]
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="2_u0jg8"]
 
 [node name="Level" instance=ExtResource("1_7kyw7")]
 
+[node name="Blocker" parent="Props" index="0" instance=ExtResource("2_u0jg8")]
+position = Vector2(-877, -252)
+scale = Vector2(16.92, 1)
+
+[node name="Blocker2" parent="Props" index="1" instance=ExtResource("2_u0jg8")]
+position = Vector2(-877, 866)
+scale = Vector2(16.92, 1)
+
+[node name="Blocker3" parent="Props" index="2" instance=ExtResource("2_u0jg8")]
+position = Vector2(-1798, 319)
+scale = Vector2(1, 11.04)
+
+[node name="Blocker4" parent="Props" index="3" instance=ExtResource("2_u0jg8")]
+position = Vector2(94, 338)
+scale = Vector2(1, 11.04)
+
+[node name="LevelGoal" parent="." index="4"]
+position = Vector2(1514, 556)
+
 [node name="BubbleSpawner" parent="." index="5"]
-position = Vector2(292, 331)
+position = Vector2(482, 560)

@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://crvf7m1yojf0"]
+
+[ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_bpx5v"]
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="2_3gem5"]
+[ext_resource type="PackedScene" uid="uid://dniehhha0uv0v" path="res://Scenes/Props/circle_spike.tscn" id="3_k7jc4"]
+
+[node name="Level" instance=ExtResource("1_bpx5v")]
+
+[node name="Blocker" parent="Props" index="0" instance=ExtResource("2_3gem5")]
+position = Vector2(-930, 874)
+scale = Vector2(18.1872, 0.98815)
+
+[node name="Blocker2" parent="Props" index="1" instance=ExtResource("2_3gem5")]
+position = Vector2(-930, -281)
+scale = Vector2(18.1872, 0.98815)
+
+[node name="Blocker3" parent="Props" index="2" instance=ExtResource("2_3gem5")]
+position = Vector2(-1840, 251)
+scale = Vector2(1.18718, 11.1882)
+
+[node name="Blocker4" parent="Props" index="3" instance=ExtResource("2_3gem5")]
+position = Vector2(142, 255)
+scale = Vector2(1.18718, 11.1882)
+
+[node name="Circle_Spike" parent="Props" index="4" instance=ExtResource("3_k7jc4")]
+position = Vector2(-864, 330)
+scale = Vector2(5.24202, 5.24202)
+
+[node name="Blocker5" parent="Props" index="5" instance=ExtResource("2_3gem5")]
+position = Vector2(-862, 741)
+scale = Vector2(3.36, 1.92)
+
+[node name="Blocker6" parent="Props" index="6" instance=ExtResource("2_3gem5")]
+position = Vector2(-858, -100)
+scale = Vector2(3.36, 1.92)
+
+[node name="LevelGoal" parent="." index="4"]
+position = Vector2(1646, 533)
+
+[node name="BubbleSpawner" parent="." index="5"]
+position = Vector2(349, 537)

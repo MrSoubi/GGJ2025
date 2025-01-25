@@ -1,0 +1,131 @@
+[gd_scene load_steps=6 format=3 uid="uid://dniehhha0uv0v"]
+
+[ext_resource type="PackedScene" uid="uid://xdjhonflspxe" path="res://Scenes/Props/DeathBox.tscn" id="1_up5yi"]
+[ext_resource type="Texture2D" uid="uid://cw5e2wyrxhq1q" path="res://icon.svg" id="2_svc8e"]
+
+[sub_resource type="Animation" id="Animation_ax655"]
+resource_name = "CircleSpikeAnim"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.15905, 6.26573]
+}
+
+[sub_resource type="Animation" id="Animation_ua7tg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vb05w"]
+_data = {
+"CircleSpikeAnim": SubResource("Animation_ax655"),
+"RESET": SubResource("Animation_ua7tg")
+}
+
+[node name="Circle_Spike" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-12, -12)
+rotation = 3.14159
+scale = Vector2(0.738515, 0.738515)
+
+[node name="DeathBox" parent="Node2D" instance=ExtResource("1_up5yi")]
+position = Vector2(50.1005, 24.3732)
+scale = Vector2(1, 1)
+
+[node name="CollisionPolygon2D" parent="Node2D/DeathBox" index="0"]
+polygon = PackedVector2Array(-82.5981, 37.9139, -82.5981, 28.4354, -43.3302, 28.4354, -12.1866, 9.47848, 2.70814, -18.9569, 2.70814, -54.1627, 10.8325, -54.1627, 12.1866, -16.2488, -6.77034, 17.6029, -41.9761, 37.9139)
+
+[node name="Icon5" type="Sprite2D" parent="Node2D"]
+modulate = Color(0.857178, 0.168381, 0.0525351, 1)
+position = Vector2(-87.5099, -20.5098)
+scale = Vector2(0.0694941, 0.320466)
+texture = ExtResource("2_svc8e")
+
+[node name="Icon6" type="Sprite2D" parent="Node2D"]
+modulate = Color(0.857178, 0.168381, 0.0525351, 1)
+position = Vector2(-79.5099, -51.5098)
+rotation = 0.523599
+scale = Vector2(0.0694941, 0.320466)
+texture = ExtResource("2_svc8e")
+
+[node name="Icon7" type="Sprite2D" parent="Node2D"]
+modulate = Color(0.857178, 0.168381, 0.0525351, 1)
+position = Vector2(-55.5098, -75.5098)
+rotation = 1.0472
+scale = Vector2(0.0694941, 0.320466)
+texture = ExtResource("2_svc8e")
+
+[node name="Icon8" type="Sprite2D" parent="Node2D"]
+modulate = Color(0.857178, 0.168381, 0.0525351, 1)
+position = Vector2(-20.5099, -84.5098)
+rotation = 1.5708
+scale = Vector2(0.0694941, 0.320466)
+texture = ExtResource("2_svc8e")
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(12, 9)
+scale = Vector2(0.760518, 0.760518)
+
+[node name="Icon" type="Sprite2D" parent="Node2D2"]
+modulate = Color(0.857178, 0.168381, 0.0525351, 1)
+position = Vector2(-86.8933, -18.8933)
+scale = Vector2(0.0694941, 0.320466)
+texture = ExtResource("2_svc8e")
+
+[node name="Icon2" type="Sprite2D" parent="Node2D2"]
+modulate = Color(0.857178, 0.168381, 0.0525351, 1)
+position = Vector2(-78.8933, -49.8933)
+rotation = 0.523599
+scale = Vector2(0.0694941, 0.320466)
+texture = ExtResource("2_svc8e")
+
+[node name="Icon3" type="Sprite2D" parent="Node2D2"]
+modulate = Color(0.857178, 0.168381, 0.0525351, 1)
+position = Vector2(-54.8933, -73.8933)
+rotation = 1.0472
+scale = Vector2(0.0694941, 0.320466)
+texture = ExtResource("2_svc8e")
+
+[node name="Icon4" type="Sprite2D" parent="Node2D2"]
+modulate = Color(0.857178, 0.168381, 0.0525351, 1)
+position = Vector2(-19.8933, -82.8933)
+rotation = 1.5708
+scale = Vector2(0.0694941, 0.320466)
+texture = ExtResource("2_svc8e")
+
+[node name="DeathBox2" parent="Node2D2" instance=ExtResource("1_up5yi")]
+position = Vector2(47.3361, 22.3532)
+scale = Vector2(0.971069, 0.971069)
+
+[node name="CollisionPolygon2D" parent="Node2D2/DeathBox2" index="0"]
+position = Vector2(9.0314e-13, -5.16536e-06)
+polygon = PackedVector2Array(-81.2441, 37.9139, -81.2441, 28.4354, -43.3302, 28.4354, -12.1866, 9.47848, 2.70814, -18.9569, 2.70815, -51.4546, 10.8326, -51.4546, 12.1866, -16.2488, -6.77034, 17.6029, -41.9761, 37.9139)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vb05w")
+}
+autoplay = "CircleSpikeAnim"
+
+[editable path="Node2D/DeathBox"]
+[editable path="Node2D2/DeathBox2"]

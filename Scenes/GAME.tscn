@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cnj5ko8x6ace8"]
+[gd_scene load_steps=27 format=3 uid="uid://cnj5ko8x6ace8"]
 
 [ext_resource type="Script" path="res://Scripts/game_initializer.gd" id="1_hfhqi"]
 [ext_resource type="Script" path="res://Scripts/LevelDefinitions/level_definition.gd" id="2_8rtuw"]
@@ -10,6 +10,9 @@
 [ext_resource type="Resource" uid="uid://drhxe8x7smwg1" path="res://Data/LevelDefinitions/LevelDefinition_3.tres" id="5_rmitb"]
 [ext_resource type="Resource" uid="uid://cytihvogyojqw" path="res://Data/LevelDefinitions/LevelDefinition_4.tres" id="6_1vm4i"]
 [ext_resource type="Resource" uid="uid://b58o2yon57swk" path="res://Data/LevelDefinitions/LevelDefinition_5.tres" id="7_xriwq"]
+[ext_resource type="Resource" uid="uid://g15khqqiv6ll" path="res://Data/LevelDefinitions/LevelDefinition_6.tres" id="8_va1s3"]
+[ext_resource type="Resource" uid="uid://cs7mcqlxqblug" path="res://Data/LevelDefinitions/LevelDefinition_7.tres" id="9_byw7l"]
+[ext_resource type="Resource" uid="uid://6ddx8saboed1" path="res://Data/LevelDefinitions/LevelDefinition_8.tres" id="10_pqhab"]
 [ext_resource type="Script" path="res://Scripts/UI/fader.gd" id="11_jqnl6"]
 [ext_resource type="Script" path="res://Scripts/music.gd" id="12_5274v"]
 [ext_resource type="AudioStream" uid="uid://bv7fkqylfcwft" path="res://Sounds/Music/ambient-soundscape-glitch-bells-276232.mp3" id="13_22oyc"]
@@ -219,7 +222,7 @@ _data = {
 [node name="Node" type="Node"]
 process_mode = 3
 script = ExtResource("1_hfhqi")
-levels = Array[ExtResource("2_8rtuw")]([ExtResource("3_vkcrv"), ExtResource("4_sesib"), ExtResource("5_rmitb"), ExtResource("6_1vm4i"), ExtResource("7_xriwq")])
+levels = Array[ExtResource("2_8rtuw")]([ExtResource("3_vkcrv"), ExtResource("4_sesib"), ExtResource("5_rmitb"), ExtResource("6_1vm4i"), ExtResource("7_xriwq"), ExtResource("8_va1s3"), ExtResource("9_byw7l"), ExtResource("10_pqhab")])
 
 [node name="Levels" type="Node" parent="."]
 process_mode = 1

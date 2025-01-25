@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1gwch1mxup8q"]
+
+[ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_qgaxl"]
+[ext_resource type="PackedScene" uid="uid://djvsmqq3gs1y3" path="res://Scenes/Props/ventilateur.tscn" id="2_nd8ge"]
+[ext_resource type="PackedScene" uid="uid://dffrbyrblyasr" path="res://Scenes/Props/classic_spike.tscn" id="3_xglaj"]
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="4_uxw5m"]
+
+[sub_resource type="Animation" id="Animation_g2nln"]
+resource_name = "FanAnim"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2017, 261), Vector2(956, 261)]
+}
+
+[sub_resource type="Animation" id="Animation_73hpf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2017, 261)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qvavl"]
+_data = {
+"FanAnim": SubResource("Animation_g2nln"),
+"RESET": SubResource("Animation_73hpf")
+}
+
+[node name="Level" instance=ExtResource("1_qgaxl")]
+
+[node name="FanAnim" type="AnimationPlayer" parent="Props" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_qvavl")
+}
+autoplay = "FanAnim"
+
+[node name="Node2D" type="Node2D" parent="Props" index="1"]
+position = Vector2(-2017, 261)
+rotation = 1.57079
+
+[node name="Ventilateur" parent="Props/Node2D" index="0" instance=ExtResource("2_nd8ge")]
+position = Vector2(-353, -5.00006)
+rotation = -1.57079
+
+[node name="Ventilateur2" parent="Props/Node2D" index="1" instance=ExtResource("2_nd8ge")]
+position = Vector2(-212, -4.99988)
+rotation = -1.57079
+
+[node name="Ventilateur3" parent="Props/Node2D" index="2" instance=ExtResource("2_nd8ge")]
+position = Vector2(-71, -5)
+rotation = -1.57079
+
+[node name="Ventilateur4" parent="Props/Node2D" index="3" instance=ExtResource("2_nd8ge")]
+position = Vector2(71, -5.00006)
+rotation = -1.57079
+
+[node name="Ventilateur5" parent="Props/Node2D" index="4" instance=ExtResource("2_nd8ge")]
+position = Vector2(212, -4.99988)
+rotation = -1.57079
+
+[node name="Ventilateur6" parent="Props/Node2D" index="5" instance=ExtResource("2_nd8ge")]
+position = Vector2(353, -5)
+rotation = -1.57079
+
+[node name="ClassicSpike" parent="Props" index="2" instance=ExtResource("3_xglaj")]
+position = Vector2(-672, -26)
+
+[node name="ClassicSpike2" parent="Props" index="3" instance=ExtResource("3_xglaj")]
+position = Vector2(45, 552)
+
+[node name="ClassicSpike3" parent="Props" index="4" instance=ExtResource("3_xglaj")]
+position = Vector2(940, 226)
+
+[node name="ClassicSpike4" parent="Props" index="5" instance=ExtResource("3_xglaj")]
+position = Vector2(2126, 214)
+scale = Vector2(1.32, 6.92)
+
+[node name="Blocker" parent="Props" index="6" instance=ExtResource("4_uxw5m")]
+position = Vector2(-81, -249)
+scale = Vector2(38.68, 1)
+
+[node name="Blocker2" parent="Props" index="7" instance=ExtResource("4_uxw5m")]
+position = Vector2(-81, 713)
+scale = Vector2(38.68, 1)
+
+[node name="Blocker3" parent="Props" index="8" instance=ExtResource("4_uxw5m")]
+position = Vector2(-1783, 357)
+scale = Vector2(1, 12.12)
+
+[node name="Blocker4" parent="Props" index="9" instance=ExtResource("4_uxw5m")]
+position = Vector2(2327, 357)
+scale = Vector2(1, 12.12)
+
+[node name="LevelGoal" parent="." index="4"]
+position = Vector2(3488, 463)
