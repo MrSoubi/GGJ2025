@@ -1,13 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6mltbmtaiws2"]
+[gd_scene load_steps=4 format=3 uid="uid://c6mltbmtaiws2"]
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_s6iam"]
 [ext_resource type="PackedScene" uid="uid://dffrbyrblyasr" path="res://Scenes/Props/classic_spike.tscn" id="2_ol4rp"]
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="3_d4ekj"]
 
 [node name="Level" instance=ExtResource("1_s6iam")]
-
-[node name="Camera2D" parent="." index="1" node_paths=PackedStringArray("target")]
-target = NodePath("")
 
 [node name="ClassicSpike" parent="Props" index="0" instance=ExtResource("2_ol4rp")]
 position = Vector2(-895, 504)
 scale = Vector2(2.08, 5.6)
+
+[node name="Blocker" parent="Props" index="1" instance=ExtResource("3_d4ekj")]
+position = Vector2(-852, 891)
+scale = Vector2(15.56, 1)
+
+[node name="Blocker2" parent="Props" index="2" instance=ExtResource("3_d4ekj")]
+position = Vector2(-852, -251)
+scale = Vector2(15.56, 1)
+
+[node name="Blocker3" parent="Props" index="3" instance=ExtResource("3_d4ekj")]
+position = Vector2(-1779, 373)
+scale = Vector2(1, 13.2872)
+
+[node name="Blocker4" parent="Props" index="4" instance=ExtResource("3_d4ekj")]
+position = Vector2(142, 418)
+scale = Vector2(1, 13.2872)
+
+[node name="LevelGoal" parent="." index="4"]
+position = Vector2(1522, 756)
+
+[node name="BubbleSpawner" parent="." index="5"]
+position = Vector2(444, 825)

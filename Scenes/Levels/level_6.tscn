@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhkc71bimmbma"]
+
+[ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_lg7ht"]
+[ext_resource type="PackedScene" uid="uid://djvsmqq3gs1y3" path="res://Scenes/Props/ventilateur.tscn" id="2_xos81"]
+[ext_resource type="PackedScene" uid="uid://dffrbyrblyasr" path="res://Scenes/Props/classic_spike.tscn" id="3_kmnx8"]
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="4_xpep6"]
+
+[node name="Level" instance=ExtResource("1_lg7ht")]
+
+[node name="Ventilateur" parent="Props" index="0" instance=ExtResource("2_xos81")]
+position = Vector2(-884, 454)
+rotation = -1.5708
+scale = Vector2(6.48, 1)
+
+[node name="Ventilateur2" parent="Props" index="1" instance=ExtResource("2_xos81")]
+position = Vector2(-751, 454)
+rotation = -1.5708
+scale = Vector2(6.48, 1)
+
+[node name="ClassicSpike" parent="Props" index="2" instance=ExtResource("3_kmnx8")]
+position = Vector2(-821, -12)
+scale = Vector2(9.96, 1)
+
+[node name="Blocker" parent="Props" index="3" instance=ExtResource("4_xpep6")]
+position = Vector2(-846, 899)
+scale = Vector2(16.44, 1)
+
+[node name="Blocker2" parent="Props" index="4" instance=ExtResource("4_xpep6")]
+position = Vector2(-846, -135)
+scale = Vector2(16.44, 1)
+
+[node name="Blocker3" parent="Props" index="5" instance=ExtResource("4_xpep6")]
+position = Vector2(-1726, 366)
+scale = Vector2(1, 11.4)
+
+[node name="Blocker4" parent="Props" index="6" instance=ExtResource("4_xpep6")]
+position = Vector2(143, 347)
+scale = Vector2(1, 11.4)
+
+[node name="LevelGoal" parent="." index="4"]
+position = Vector2(1699, 596)
+
+[node name="BubbleSpawner" parent="." index="5"]
+position = Vector2(513, 612)
