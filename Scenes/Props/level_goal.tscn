@@ -1,8 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://ct37jifcrdty2"]
+[gd_scene load_steps=9 format=3 uid="uid://ct37jifcrdty2"]
 
 [ext_resource type="Script" path="res://Scripts/Props/level_goal.gd" id="1_x6485"]
+[ext_resource type="Texture2D" uid="uid://qxjeofib8ww3" path="res://Textures/goal_statue.png" id="2_p36cs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7kaxc"]
+
+[sub_resource type="Gradient" id="Gradient_o3fb4"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_c4cfr"]
+gradient = SubResource("Gradient_o3fb4")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.884615, 0.115385)
+
+[sub_resource type="Curve" id="Curve_mprtc"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.839237, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_2x57a"]
+curve = SubResource("Curve_mprtc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_svenm"]
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.0
+scale_curve = SubResource("CurveTexture_2x57a")
 
 [node name="LevelGoal" type="Node2D"]
 script = ExtResource("1_x6485")
@@ -19,5 +47,19 @@ scale = Vector2(8, 8)
 shape = SubResource("CircleShape2D_7kaxc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-72, 72)
+scale = Vector2(0.615388, 0.615388)
+texture = ExtResource("2_p36cs")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.757945, 0.756646, 7.70092e-07, 1)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_c4cfr")
+texture_scale = 0.5
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 2000
+sub_emitter = NodePath(".")
+process_material = SubResource("ParticleProcessMaterial_svenm")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
