@@ -3,6 +3,7 @@ extends RigidBody2D
 
 @export var breathForce : float
 @export var maxBreathDist : float
+@export var max_speed : float
 
 var mousePos : Vector2
 var distFromMouse : float
@@ -19,8 +20,10 @@ func _physics_process(delta: float) -> void:
 	if canMove && distFromMouse < maxBreathDist:
 		var force : float = lerpf(0, breathForce, maxBreathDist / distFromMouse)
 		var moveDir : Vector2 = (position - mousePos).normalized()
-
+		
 		apply_force(moveDir * force)
+		
+		linear_velocity = linear_velocity.limit_length(max_speed)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
