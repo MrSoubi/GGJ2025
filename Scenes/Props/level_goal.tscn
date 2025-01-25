@@ -49,9 +49,10 @@ scale = Vector2(8, 8)
 shape = SubResource("CircleShape2D_7kaxc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-72, 72)
-scale = Vector2(0.615388, 0.615388)
+position = Vector2(176, 178)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_p36cs")
+flip_h = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.757945, 0.756646, 7.70092e-07, 1)
