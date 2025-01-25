@@ -9,18 +9,11 @@
 [ext_resource type="Resource" uid="uid://cytihvogyojqw" path="res://Data/LevelDefinitions/LevelDefinition_4.tres" id="7_m4rgy"]
 [ext_resource type="Resource" uid="uid://b58o2yon57swk" path="res://Data/LevelDefinitions/LevelDefinition_5.tres" id="8_tvehr"]
 
-[node name="LevelSelection" type="Control"]
+[node name="LevelSelection" type="CanvasLayer"]
 process_mode = 3
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_6qj4i")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

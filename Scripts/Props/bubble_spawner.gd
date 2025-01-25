@@ -1,5 +1,7 @@
 extends Node2D
 
+signal bubble_spawned(bubble: BubbleController)
+
 const CONTROLLER = preload("res://Scenes/Controller/Controller.tscn")
 const RSE_LEVEL_START = preload("res://Data/RSE_LevelStart.tres")
 
@@ -13,3 +15,4 @@ func spawn_bubble() -> void :
 	var bubble = CONTROLLER.instantiate()
 	get_parent().add_child.call_deferred(bubble)
 	bubble.global_position = global_position
+	bubble_spawned.emit(bubble)

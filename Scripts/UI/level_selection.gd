@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 signal button_go_back_to_main_menu_pressed
 signal level_selected(level_index : int)

@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 signal button_play_pressed
 signal button_settings_pressed

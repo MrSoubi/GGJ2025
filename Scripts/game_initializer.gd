@@ -1,8 +1,8 @@
 extends Node
 
-@onready var main_menu: Control = $MainMenu
-@onready var level_selection: Control = $LevelSelection
-@onready var pause_menu: Control = $PauseMenu
+@onready var main_menu: CanvasLayer = $MainMenu
+@onready var level_selection: CanvasLayer = $LevelSelection
+@onready var pause_menu: CanvasLayer = $PauseMenu
 @onready var level_instance: Node = $Levels
 @onready var transition_layer: Fader = $TransitionLayer
 

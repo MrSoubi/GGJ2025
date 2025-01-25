@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 signal resume_button_pressed
 signal to_main_menu_button_pressed
