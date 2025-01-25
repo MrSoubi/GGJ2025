@@ -254,12 +254,12 @@ script = ExtResource("12_5274v")
 stream = ExtResource("13_22oyc")
 volume_db = -80.0
 bus = &"Music"
-parameters/looping = false
+parameters/looping = true
 
 [node name="MysticalSoundscape" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("14_7lmy1")
 bus = &"Music"
-parameters/looping = false
+parameters/looping = true
 
 [node name="SFX_Win" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("15_b8kxo")
