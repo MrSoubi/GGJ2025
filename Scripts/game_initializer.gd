@@ -54,7 +54,7 @@ func enable_level_selection_menu() -> void:
 	get_tree().paused = true
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("ui_cancel") and not main_menu.visible and not level_selection.visible:
 		if pause_menu.visible :
 			RSE_GAME_UNPAUSED.triggered.emit()
 			pause_menu.visible = false
