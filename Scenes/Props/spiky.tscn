@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmxt4oo0jgryn"]
+
+[ext_resource type="Texture2D" uid="uid://dh6e35y2m3rct" path="res://Textures/spiky_texture.png" id="1_v2p5r"]
+[ext_resource type="PackedScene" uid="uid://xdjhonflspxe" path="res://Scenes/Props/DeathBox.tscn" id="2_nsmw6"]
+
+[node name="Spiky" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_v2p5r")
+
+[node name="DeathBox" parent="." instance=ExtResource("2_nsmw6")]
+position = Vector2(-132, -47)
+
+[node name="CollisionPolygon2D" parent="DeathBox" index="0"]
+polygon = PackedVector2Array(35, -46, 63, -30, 115, -142, 169, -34, 257, -178, 213, 7, 381, -53, 261, 48, 333, 38, 288, 66, 432, 80, 246, 137, 270, 201, 186, 162, 183.889, 169.27, 132, 348, 88, 242, 47, 295, 65, 216, -17, 216, 1, 166, -177, 190, -25.4501, 115.544, -122, -27, -1, 49, -37, -35, 48, -3)
+
+[editable path="DeathBox"]
