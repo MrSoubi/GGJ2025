@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dba2pces21qaw"]
+[gd_scene load_steps=10 format=3 uid="uid://dba2pces21qaw"]
 
 [ext_resource type="Script" path="res://Scripts/Controller/BubbleController.gd" id="1_bps88"]
-[ext_resource type="Texture2D" uid="uid://cw5e2wyrxhq1q" path="res://icon.svg" id="2_abw0k"]
+[ext_resource type="Texture2D" uid="uid://hml04ph71ufy" path="res://Textures/FloatingBubble/spr_1.png" id="2_im8h5"]
+[ext_resource type="Texture2D" uid="uid://du4vde0x6tyq6" path="res://Textures/FloatingBubble/spr_2.png" id="3_5o2ow"]
+[ext_resource type="Texture2D" uid="uid://b5dqkn62jtw76" path="res://Textures/FloatingBubble/spr_3.png" id="4_iu3x2"]
+[ext_resource type="Texture2D" uid="uid://ff1f2yk6m06b" path="res://Textures/FloatingBubble/spr_4.png" id="5_aon6g"]
+[ext_resource type="Texture2D" uid="uid://ckgcu2a6q5yj5" path="res://Textures/FloatingBubble/spr_5.png" id="6_vkjxd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_arfop"]
 friction = 0.0
@@ -9,6 +13,29 @@ bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qmstj"]
 radius = 28.0064
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6veoy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_im8h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5o2ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iu3x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aon6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vkjxd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
 
 [node name="Bubble" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_arfop")
@@ -23,6 +50,8 @@ max_speed = 400.0
 scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_qmstj")
 
-[node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(2, 2)
-texture = ExtResource("2_abw0k")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.350676, 0.387671)
+sprite_frames = SubResource("SpriteFrames_6veoy")
+autoplay = "default"
+frame_progress = 0.00704938

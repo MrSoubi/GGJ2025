@@ -22,6 +22,7 @@ func _physics_process(delta: float) -> void:
 		var moveDir : Vector2 = (position - mousePos).normalized()
 		
 		apply_force(moveDir * force)
+		apply_torque(2500)
 		
 		linear_velocity = linear_velocity.limit_length(max_speed)
 
