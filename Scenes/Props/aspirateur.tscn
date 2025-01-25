@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7sks7p011pqy"]
+
+[ext_resource type="Script" path="res://Scripts/Props/aspirateur.gd" id="1_3nwln"]
+[ext_resource type="Texture2D" uid="uid://cw5e2wyrxhq1q" path="res://icon.svg" id="1_23bsf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x03am"]
+size = Vector2(120, 124)
+
+[node name="Aspirateur" type="Area2D"]
+script = ExtResource("1_3nwln")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_x03am")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_23bsf")
