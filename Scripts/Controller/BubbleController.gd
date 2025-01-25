@@ -1,6 +1,8 @@
 class_name BubbleController
 extends RigidBody2D
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 @export var breathForce : float
 @export var maxBreathDist : float
 @export var max_speed : float
@@ -11,6 +13,12 @@ var distFromMouse : float
 var canMove : bool
 
 const RSE_ON_PLAYER_DEATH = preload("res://Data/RSE_OnPlayerDeath.tres")
+
+func _ready() -> void:
+	RSE_ON_PLAYER_DEATH.triggered.connect(start_death_anim)
+
+func start_death_anim():
+	animated_sprite_2d.play("death")
 
 func _process(delta: float) -> void:
 	mousePos = get_global_mouse_position()

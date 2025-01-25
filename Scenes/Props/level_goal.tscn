@@ -60,7 +60,7 @@ texture = SubResource("GradientTexture2D_c4cfr")
 texture_scale = 0.5
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(-2, -5)
 amount = 2000
 sub_emitter = NodePath(".")
 process_material = SubResource("ParticleProcessMaterial_svenm")

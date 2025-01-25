@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dba2pces21qaw"]
+[gd_scene load_steps=20 format=3 uid="uid://dba2pces21qaw"]
 
 [ext_resource type="Script" path="res://Scripts/Controller/BubbleController.gd" id="1_bps88"]
 [ext_resource type="Texture2D" uid="uid://hml04ph71ufy" path="res://Textures/FloatingBubble/spr_1.png" id="2_im8h5"]
+[ext_resource type="Texture2D" uid="uid://yjx5v3el1734" path="res://Textures/popping_bubble_anim.png" id="2_rl4f6"]
 [ext_resource type="Texture2D" uid="uid://du4vde0x6tyq6" path="res://Textures/FloatingBubble/spr_2.png" id="3_5o2ow"]
 [ext_resource type="Texture2D" uid="uid://b5dqkn62jtw76" path="res://Textures/FloatingBubble/spr_3.png" id="4_iu3x2"]
 [ext_resource type="Texture2D" uid="uid://ff1f2yk6m06b" path="res://Textures/FloatingBubble/spr_4.png" id="5_aon6g"]
@@ -14,8 +15,76 @@ bounce = 1.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_qmstj"]
 radius = 28.0064
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3psxh"]
+atlas = ExtResource("2_rl4f6")
+region = Rect2(0, 0, 432, 433)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1o4q"]
+atlas = ExtResource("2_rl4f6")
+region = Rect2(432, 0, 432, 433)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raq5p"]
+atlas = ExtResource("2_rl4f6")
+region = Rect2(864, 0, 432, 433)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwsub"]
+atlas = ExtResource("2_rl4f6")
+region = Rect2(1296, 0, 432, 433)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aisbv"]
+atlas = ExtResource("2_rl4f6")
+region = Rect2(1728, 0, 432, 433)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkqnw"]
+atlas = ExtResource("2_rl4f6")
+region = Rect2(2160, 0, 432, 433)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nniks"]
+atlas = ExtResource("2_rl4f6")
+region = Rect2(2592, 0, 432, 433)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3i5t"]
+atlas = ExtResource("2_rl4f6")
+region = Rect2(3024, 0, 432, 433)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i10pg"]
+atlas = ExtResource("2_rl4f6")
+region = Rect2(3456, 0, 432, 433)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6veoy"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3psxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1o4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raq5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwsub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aisbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkqnw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nniks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3i5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i10pg")
+}],
+"loop": true,
+"name": &"death",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_im8h5")
@@ -54,4 +123,4 @@ shape = SubResource("CircleShape2D_qmstj")
 scale = Vector2(0.350676, 0.387671)
 sprite_frames = SubResource("SpriteFrames_6veoy")
 autoplay = "default"
-frame_progress = 0.00704938
+frame_progress = 0.293827
