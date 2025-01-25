@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cnj5ko8x6ace8"]
+[gd_scene load_steps=24 format=3 uid="uid://cnj5ko8x6ace8"]
 
 [ext_resource type="Script" path="res://Scripts/game_initializer.gd" id="1_hfhqi"]
 [ext_resource type="Script" path="res://Scripts/LevelDefinitions/level_definition.gd" id="2_8rtuw"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://Scripts/music.gd" id="12_5274v"]
 [ext_resource type="AudioStream" uid="uid://bv7fkqylfcwft" path="res://Sounds/Music/ambient-soundscape-glitch-bells-276232.mp3" id="13_22oyc"]
 [ext_resource type="AudioStream" uid="uid://c5yohh7tgtux3" path="res://Sounds/Music/mystical-music-54294.mp3" id="14_7lmy1"]
+[ext_resource type="AudioStream" uid="uid://d4j2nvlmjvmry" path="res://Sounds/SFX/Pianoroll_Win.wav" id="15_b8kxo"]
 
 [sub_resource type="Animation" id="Animation_wgb83"]
 length = 0.001
@@ -259,6 +260,11 @@ parameters/looping = false
 stream = ExtResource("14_7lmy1")
 bus = &"Music"
 parameters/looping = false
+
+[node name="SFX_Win" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("15_b8kxo")
+volume_db = 6.0
+bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Music"]
 libraries = {
