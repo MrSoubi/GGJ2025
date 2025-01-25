@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="RSE" load_steps=2 format=3 uid="uid://d3dwb4prp0fnk"]
+
+[ext_resource type="Script" path="res://Scripts/RSE.gd" id="1_dw4jk"]
+
+[resource]
+script = ExtResource("1_dw4jk")

@@ -1,0 +1,57 @@
+[gd_scene load_steps=12 format=3 uid="uid://cnj5ko8x6ace8"]
+
+[ext_resource type="Script" path="res://Scripts/game_initializer.gd" id="1_hfhqi"]
+[ext_resource type="Script" path="res://Scripts/LevelDefinitions/level_definition.gd" id="2_8rtuw"]
+[ext_resource type="PackedScene" uid="uid://d31cs2fvr1s4e" path="res://Scenes/UI/main_menu.tscn" id="2_lm705"]
+[ext_resource type="PackedScene" uid="uid://dyrhu210phwla" path="res://Scenes/UI/level_selection.tscn" id="3_4ea6p"]
+[ext_resource type="Resource" uid="uid://cjurevaug6tpt" path="res://Data/LevelDefinitions/LevelDefinition_1.tres" id="3_vkcrv"]
+[ext_resource type="PackedScene" uid="uid://b0vck1a8wagxx" path="res://Scenes/UI/pause_menu.tscn" id="4_42c4y"]
+[ext_resource type="Resource" uid="uid://re4buuymb8wg" path="res://Data/LevelDefinitions/LevelDefinition_2.tres" id="4_sesib"]
+[ext_resource type="Resource" uid="uid://drhxe8x7smwg1" path="res://Data/LevelDefinitions/LevelDefinition_3.tres" id="5_rmitb"]
+[ext_resource type="Resource" uid="uid://cytihvogyojqw" path="res://Data/LevelDefinitions/LevelDefinition_4.tres" id="6_1vm4i"]
+[ext_resource type="Resource" uid="uid://b58o2yon57swk" path="res://Data/LevelDefinitions/LevelDefinition_5.tres" id="7_xriwq"]
+[ext_resource type="Script" path="res://Scripts/UI/fader.gd" id="11_jqnl6"]
+
+[node name="Node" type="Node"]
+process_mode = 3
+script = ExtResource("1_hfhqi")
+levels = Array[ExtResource("2_8rtuw")]([ExtResource("3_vkcrv"), ExtResource("4_sesib"), ExtResource("5_rmitb"), ExtResource("6_1vm4i"), ExtResource("7_xriwq")])
+
+[node name="Fader" type="Control" parent="."]
+process_mode = 3
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_jqnl6")
+
+[node name="ColorRect" type="ColorRect" parent="Fader"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Levels" type="Node" parent="."]
+process_mode = 1
+
+[node name="MainMenu" parent="." instance=ExtResource("2_lm705")]
+z_index = 1
+
+[node name="LevelSelection" parent="." instance=ExtResource("3_4ea6p")]
+z_index = 1
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_42c4y")]
+
+[connection signal="button_exit_pressed" from="MainMenu" to="." method="_on_main_menu_button_exit_pressed"]
+[connection signal="button_play_pressed" from="MainMenu" to="." method="_on_main_menu_button_play_pressed"]
+[connection signal="button_settings_pressed" from="MainMenu" to="." method="_on_main_menu_button_settings_pressed"]
+[connection signal="button_go_back_to_main_menu_pressed" from="LevelSelection" to="." method="_on_level_selection_button_go_back_to_main_menu_pressed"]
+[connection signal="level_selected" from="LevelSelection" to="." method="_on_level_selection_level_selected"]
+[connection signal="resume_button_pressed" from="PauseMenu" to="." method="_on_pause_menu_resume_button_pressed"]
+[connection signal="to_main_menu_button_pressed" from="PauseMenu" to="." method="_on_pause_menu_to_main_menu_button_pressed"]
