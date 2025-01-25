@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelDefinition" load_steps=3 format=3 uid="uid://bu3et2wi1d10q"]
+
+[ext_resource type="PackedScene" uid="uid://cc2bu6renlrax" path="res://Scenes/Levels/level_10.tscn" id="1_6tcc5"]
+[ext_resource type="Script" path="res://Scripts/LevelDefinitions/level_definition.gd" id="2_fxqts"]
+
+[resource]
+script = ExtResource("2_fxqts")
+index = 10
+level = ExtResource("1_6tcc5")
+available = true
