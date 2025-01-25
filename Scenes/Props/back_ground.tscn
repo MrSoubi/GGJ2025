@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dddqivenhmajr"]
+
+[ext_resource type="Texture2D" uid="uid://ba7lutatm16ok" path="res://Textures/InteriorLayers/Background colo.png" id="1_vsji5"]
+[ext_resource type="Texture2D" uid="uid://btcsutahhrwly" path="res://Textures/InteriorLayers/arche + meuble colo.png" id="2_rm2vo"]
+
+[node name="BackGround" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+offset = Vector2(960, 540)
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 960, 540)
+follow_viewport_enabled = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="BackgroundColo" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("1_vsji5")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="Arche+MeubleColo" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("2_rm2vo")
