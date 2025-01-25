@@ -45,6 +45,9 @@ _data = {
 
 [node name="Level" instance=ExtResource("1_5djyj")]
 
+[node name="BackGround" parent="." index="0"]
+position = Vector2(0, 0)
+
 [node name="Node2D" type="Node2D" parent="Props" index="0"]
 position = Vector2(0, 112)
 
