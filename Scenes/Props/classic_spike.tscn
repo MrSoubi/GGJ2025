@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dffrbyrblyasr"]
+
+[ext_resource type="Texture2D" uid="uid://cw5e2wyrxhq1q" path="res://icon.svg" id="1_vwpjl"]
+[ext_resource type="PackedScene" uid="uid://xdjhonflspxe" path="res://Scenes/Props/DeathBox.tscn" id="2_cm8av"]
+
+[node name="ClassicSpike" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0.999995, 0.302208, 0.324153, 1)
+texture = ExtResource("1_vwpjl")
+
+[node name="DeathBox" parent="." instance=ExtResource("2_cm8av")]
+
+[node name="CollisionPolygon2D" parent="DeathBox" index="0"]
+polygon = PackedVector2Array(60, 60, -59, 60, -59, -60, 59, -60)
+
+[editable path="DeathBox"]

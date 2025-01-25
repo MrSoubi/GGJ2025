@@ -1,5 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6mltbmtaiws2"]
+[gd_scene load_steps=3 format=3 uid="uid://c6mltbmtaiws2"]
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_s6iam"]
+[ext_resource type="PackedScene" uid="uid://dffrbyrblyasr" path="res://Scenes/Props/classic_spike.tscn" id="2_ol4rp"]
 
 [node name="Level" instance=ExtResource("1_s6iam")]
+
+[node name="Camera2D" parent="." index="1" node_paths=PackedStringArray("target")]
+target = NodePath("")
+
+[node name="ClassicSpike" parent="Props" index="0" instance=ExtResource("2_ol4rp")]
+position = Vector2(-895, 504)
+scale = Vector2(2.08, 5.6)

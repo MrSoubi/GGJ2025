@@ -1,5 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://blrehggx8u2ol"]
+[gd_scene load_steps=3 format=3 uid="uid://blrehggx8u2ol"]
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_82gdl"]
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="2_gvbps"]
 
 [node name="Level" instance=ExtResource("1_82gdl")]
+
+[node name="Blocker" parent="Props" index="0" instance=ExtResource("2_gvbps")]
+position = Vector2(-888, 479)
+scale = Vector2(2.64, 5.44)

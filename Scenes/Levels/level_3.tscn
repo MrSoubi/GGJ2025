@@ -1,5 +1,96 @@
-[gd_scene load_steps=2 format=3 uid="uid://sisjvew71ld2"]
+[gd_scene load_steps=6 format=3 uid="uid://sisjvew71ld2"]
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_q3rco"]
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="2_o33vu"]
+
+[sub_resource type="Animation" id="Animation_4axdo"]
+resource_name = "BlockerUpDown"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blocker4:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(430, -53), Vector2(430, -540)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Blocker3:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(430, 1081), Vector2(430, 594)]
+}
+
+[sub_resource type="Animation" id="Animation_un1u8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blocker4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(226, 96)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Blocker3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(226, 1026)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hhpww"]
+_data = {
+"BlockerUpDown": SubResource("Animation_4axdo"),
+"RESET": SubResource("Animation_un1u8")
+}
 
 [node name="Level" instance=ExtResource("1_q3rco")]
+
+[node name="Camera2D" parent="." index="1" node_paths=PackedStringArray("target")]
+target = NodePath("")
+
+[node name="Blocker" parent="Props" index="0" instance=ExtResource("2_o33vu")]
+position = Vector2(-987, 47)
+scale = Vector2(2.12, 5.16)
+
+[node name="Blocker2" parent="Props" index="1" instance=ExtResource("2_o33vu")]
+position = Vector2(-314, 526)
+scale = Vector2(2.12, 5.16)
+
+[node name="Blocker3" parent="Props" index="2" instance=ExtResource("2_o33vu")]
+position = Vector2(226, 1026)
+scale = Vector2(2.12, 5.16)
+
+[node name="Blocker4" parent="Props" index="3" instance=ExtResource("2_o33vu")]
+position = Vector2(226, 96)
+scale = Vector2(2.12, 5.16)
+
+[node name="BlockerAnimation" type="AnimationPlayer" parent="Props" index="4"]
+libraries = {
+"": SubResource("AnimationLibrary_hhpww")
+}
+autoplay = "BlockerUpDown"
+
+[node name="LevelGoal" parent="." index="4"]
+position = Vector2(2802, 510)
