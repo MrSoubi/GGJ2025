@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://byvf5e708hwkv" path="res://Scenes/Controller/camera_2d.tscn" id="1_rbayg"]
 [ext_resource type="PackedScene" uid="uid://ct37jifcrdty2" path="res://Scenes/Props/level_goal.tscn" id="3_epthy"]
 [ext_resource type="PackedScene" uid="uid://dd3xx7tbujps7" path="res://Scenes/Props/bubble_spawner.tscn" id="3_st03q"]
-[ext_resource type="PackedScene" uid="uid://bk6g6ibegcxj6" path="res://Scenes/Controller/mouse_propulsion_pointer.tscn" id="6_mj0ue"]
+[ext_resource type="PackedScene" path="res://Scenes/Controller/mouse_propulsion_pointer.tscn" id="6_mj0ue"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_orxr1"]
 font_size = 80
 
-[node name="Level" type="Node2D"]
+[node name="Level2" type="Node2D"]
 process_mode = 1
 
 [node name="Camera2D" parent="." instance=ExtResource("1_rbayg")]

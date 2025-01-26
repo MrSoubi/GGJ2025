@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqatxnb17rdos"]
+[gd_scene load_steps=5 format=3 uid="uid://lrhu0xy1cyh3"]
 
-[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/Blockers/blocker_template.tscn" id="1_k8q06"]
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="1_8vq66"]
 
 [sub_resource type="Animation" id="Animation_uggjl"]
 length = 0.001
@@ -19,7 +19,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_aryd7"]
 resource_name = "RollingBlocker"
-length = 6.0
+length = 3.4
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -28,7 +28,7 @@ tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3, 6),
+"times": PackedFloat32Array(0, 1.6, 3.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, -3.15905, -6.26573]
@@ -43,7 +43,7 @@ _data = {
 [node name="TurningBlocker" type="Node2D"]
 rotation = -3.08324
 
-[node name="Blocker" parent="." instance=ExtResource("1_k8q06")]
+[node name="Blocker" parent="." instance=ExtResource("1_8vq66")]
 scale = Vector2(7.36, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
