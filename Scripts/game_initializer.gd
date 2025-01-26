@@ -17,6 +17,8 @@ const RSE_GAME_PAUSED = preload("res://Data/RSE_GamePaused.tres")
 const RSE_GAME_UNPAUSED = preload("res://Data/RSE_GameUnpaused.tres")
 const RSE_ON_PLAYER_DEATH = preload("res://Data/RSE_OnPlayerDeath.tres")
 
+@onready var intro_video: VideoStreamPlayer = $IntroVideo
+
 var current_level
 var current_level_index : int
 
@@ -38,7 +40,6 @@ func enable_main_menu() -> void:
 	
 	team_bubbles.visible = true
 	team_bubbles.process_mode = Node.PROCESS_MODE_ALWAYS
-
 
 func restart_level():
 	transition_layer.transition()
@@ -101,7 +102,15 @@ func start_level(level : LevelDefinition):
 	level_selection.visible = false
 	pause_menu.visible = false
 	get_tree().paused = false
+	
 	current_level_index = level.index
+	
+	if current_level_index == 1:
+		intro_video.play()
+		await intro_video.finished
+		transition_layer.transition()
+		await transition_layer.on_transition_finished
+	
 	current_level = level.level.instantiate()
 	level_instance.add_child(current_level)
 	RSE_LEVEL_START.triggered.emit()
