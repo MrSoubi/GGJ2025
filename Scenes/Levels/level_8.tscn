@@ -14,7 +14,7 @@ scale = Vector2(8.52202, 8.52202)
 position = Vector2(1902, 714)
 
 [node name="BubbleSpawner" parent="." index="3"]
-position = Vector2(-14, 537)
+position = Vector2(26, 736)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="6"]
 scale = Vector2(0.3, 0.3)
