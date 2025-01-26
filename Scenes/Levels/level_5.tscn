@@ -90,10 +90,10 @@ libraries = {
 }
 autoplay = "BlockAnim"
 
-[node name="LevelGoal" parent="." index="4"]
+[node name="LevelGoal" parent="." index="3"]
 position = Vector2(2766, 729)
 
-[node name="BubbleSpawner" parent="." index="5"]
+[node name="BubbleSpawner" parent="." index="4"]
 position = Vector2(445, 586)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="6"]

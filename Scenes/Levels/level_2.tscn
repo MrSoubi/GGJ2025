@@ -5,10 +5,10 @@
 
 [node name="Level" instance=ExtResource("1_82gdl")]
 
-[node name="LevelGoal" parent="." index="4"]
+[node name="LevelGoal" parent="." index="3"]
 position = Vector2(1393, 706)
 
-[node name="BubbleSpawner" parent="." index="5"]
+[node name="BubbleSpawner" parent="." index="4"]
 position = Vector2(431, 806)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="6"]

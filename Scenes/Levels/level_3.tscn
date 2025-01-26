@@ -82,10 +82,10 @@ libraries = {
 }
 autoplay = "BlockerUpDown"
 
-[node name="LevelGoal" parent="." index="4"]
+[node name="LevelGoal" parent="." index="3"]
 position = Vector2(2598, 727)
 
-[node name="BubbleSpawner" parent="." index="5"]
+[node name="BubbleSpawner" parent="." index="4"]
 position = Vector2(365, 506)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="6"]
