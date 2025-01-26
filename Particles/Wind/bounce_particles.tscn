@@ -43,6 +43,7 @@ collision_friction = 0.0
 collision_bounce = 1.0
 
 [node name="GPUParticles2D" type="GPUParticles2D"]
+modulate = Color(1, 1, 1, 0.313726)
 light_mask = 2
 visibility_layer = 2
 amount = 1500
