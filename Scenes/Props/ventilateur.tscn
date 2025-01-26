@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://djvsmqq3gs1y3"]
+[gd_scene load_steps=6 format=3 uid="uid://djvsmqq3gs1y3"]
 
 [ext_resource type="Script" path="res://Scripts/Props/ventilateur.gd" id="1_jqv5w"]
 [ext_resource type="Texture2D" uid="uid://cw5e2wyrxhq1q" path="res://icon.svg" id="2_xa5fx"]
 [ext_resource type="PackedScene" uid="uid://2hw3q25jaeqf" path="res://Particles/Wind/ventilation_particles.tscn" id="3_oekqj"]
+[ext_resource type="AudioStream" uid="uid://cdmcy35dt3rni" path="res://Sounds/SFX/ventilation.mp3" id="4_3fte1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkmmc"]
 size = Vector2(122, 120)
@@ -23,6 +24,10 @@ texture = ExtResource("2_xa5fx")
 position = Vector2(-62.6, 0)
 rotation = -1.57079
 scale = Vector2(1.864, 0.92)
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3fte1")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
