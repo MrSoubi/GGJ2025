@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bghtut87flilb"]
+[gd_scene load_steps=21 format=3 uid="uid://bghtut87flilb"]
 
 [ext_resource type="Script" path="res://Scripts/Controller/BubbleController.gd" id="1_bps88"]
 [ext_resource type="Texture2D" uid="uid://hml04ph71ufy" path="res://Textures/FloatingBubble/spr_1.png" id="2_im8h5"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b5dqkn62jtw76" path="res://Textures/FloatingBubble/spr_3.png" id="4_iu3x2"]
 [ext_resource type="Texture2D" uid="uid://ff1f2yk6m06b" path="res://Textures/FloatingBubble/spr_4.png" id="5_aon6g"]
 [ext_resource type="Texture2D" uid="uid://ckgcu2a6q5yj5" path="res://Textures/FloatingBubble/spr_5.png" id="6_vkjxd"]
+[ext_resource type="AudioStream" uid="uid://dfdsb17bh34yv" path="res://Sounds/SFX/bubble_pop.mp3" id="8_1x1no"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_arfop"]
 friction = 0.0
@@ -126,3 +127,7 @@ scale = Vector2(0.350676, 0.387671)
 sprite_frames = SubResource("SpriteFrames_6veoy")
 autoplay = "default"
 frame_progress = 0.293827
+
+[node name="PopSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_1x1no")
+bus = &"SFX"

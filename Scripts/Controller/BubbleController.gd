@@ -6,6 +6,7 @@ extends RigidBody2D
 @export var breathForce : float
 @export var maxBreathDist : float
 @export var max_speed : float
+@onready var pop_sfx: AudioStreamPlayer = $PopSFX
 
 var mousePos : Vector2
 var distFromMouse : float
@@ -18,6 +19,7 @@ func _ready() -> void:
 	RSE_ON_PLAYER_DEATH.triggered.connect(start_death_anim)
 
 func start_death_anim():
+	pop_sfx.play()
 	animated_sprite_2d.play("death")
 
 func _process(delta: float) -> void:
