@@ -1,9 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0vck1a8wagxx"]
+[gd_scene load_steps=15 format=3 uid="uid://b0vck1a8wagxx"]
 
 [ext_resource type="Script" path="res://Scripts/UI/pause_menu.gd" id="1_qghv8"]
+[ext_resource type="FontFile" uid="uid://c0ymilsqh56kj" path="res://Wonderly.otf" id="2_sym7o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xixeo"]
-font_size = 50
+font_size = 300
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7adx6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i10de"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r51ay"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rljqt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f0iyh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dv77x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pa7f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4obu8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bn6hg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x124m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0vfl4"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -25,19 +48,49 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sym7o")
+theme_override_font_sizes/font_size = 150
 text = "PAUSED"
 label_settings = SubResource("LabelSettings_xixeo")
 horizontal_alignment = 1
 
 [node name="ButtonToMainMenu" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sym7o")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7adx6")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_i10de")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_r51ay")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_rljqt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_f0iyh")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dv77x")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4pa7f")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_4obu8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bn6hg")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x124m")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0vfl4")
 text = "Return to main menu"
 
 [node name="ButtonResume" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sym7o")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7adx6")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_i10de")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_r51ay")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_rljqt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_f0iyh")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dv77x")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4pa7f")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_4obu8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bn6hg")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x124m")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0vfl4")
 text = "Resume"
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/ButtonToMainMenu" to="." method="_on_button_to_main_menu_pressed"]
