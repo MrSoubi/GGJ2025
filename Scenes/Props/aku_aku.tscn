@@ -5,65 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://calvaaopbtbaw" path="res://Textures/machoire.png" id="2_kpksc"]
 [ext_resource type="PackedScene" uid="uid://xdjhonflspxe" path="res://Scenes/Props/DeathBox.tscn" id="4_ce856"]
 
-[sub_resource type="Animation" id="Animation_2ljfr"]
-resource_name = "idle"
-length = 6.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Jaw:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 2, 3.06667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(10, 29), Vector2(-6, 29), Vector2(-2, -3)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Jaw:rotation")
-tracks/1/interp = 4
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5, 2, 3.06667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.426836, 0.148385, 0.3732]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Head:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Head:rotation")
-tracks/3/interp = 4
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.03333, 2.73333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, -0.143662, 0.330225]
-}
-
 [sub_resource type="Animation" id="Animation_1sheh"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Jaw:position")
+tracks/0/path = NodePath("Mirrorer/Jaw:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -75,7 +22,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Jaw:rotation")
+tracks/1/path = NodePath("Mirrorer/Jaw:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -87,7 +34,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Head:position")
+tracks/2/path = NodePath("Mirrorer/Head:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -99,7 +46,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Head:rotation")
+tracks/3/path = NodePath("Mirrorer/Head:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -115,7 +62,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Head:position")
+tracks/0/path = NodePath("Mirrorer/Head:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -127,7 +74,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Head:rotation")
+tracks/1/path = NodePath("Mirrorer/Head:rotation")
 tracks/1/interp = 3
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -139,7 +86,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Jaw:position")
+tracks/2/path = NodePath("Mirrorer/Jaw:position")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -151,7 +98,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Jaw:rotation")
+tracks/3/path = NodePath("Mirrorer/Jaw:rotation")
 tracks/3/interp = 3
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -159,6 +106,59 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, -0.462542, 6.59782]
+}
+
+[sub_resource type="Animation" id="Animation_2ljfr"]
+resource_name = "idle"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mirrorer/Jaw:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2, 3.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(10, 29), Vector2(-6, 29), Vector2(-2, -3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mirrorer/Jaw:rotation")
+tracks/1/interp = 4
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 2, 3.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.426836, 0.148385, 0.3732]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mirrorer/Head:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mirrorer/Head:rotation")
+tracks/3/interp = 4
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.03333, 2.73333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.143662, 0.330225]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6sdrm"]
@@ -178,35 +178,6 @@ radius = 14.0357
 gravity_scale = 0.0
 script = ExtResource("1_yu54m")
 
-[node name="Head" type="Node2D" parent="."]
-scale = Vector2(0.5, 0.5)
-
-[node name="Head" type="Sprite2D" parent="Head"]
-position = Vector2(-129, -71)
-texture = ExtResource("1_cgm0t")
-
-[node name="DeathBox" parent="Head" instance=ExtResource("4_ce856")]
-position = Vector2(-7.21248, 52.4578)
-rotation = -0.530271
-
-[node name="CollisionPolygon2D" parent="Head/DeathBox" index="0"]
-position = Vector2(-87, 22)
-polygon = PackedVector2Array(82.1167, 30.2476, -0.195671, 14.4468, 52.2589, -140.271, 145.557, -275.679, 311.369, -194.696, 258.469, -66.9003, 129.153, -49.9807)
-
-[node name="Jaw" type="Node2D" parent="."]
-rotation = -0.426836
-scale = Vector2(0.5, 0.5)
-
-[node name="Jaw" type="Sprite2D" parent="Jaw"]
-position = Vector2(-130, -68)
-texture = ExtResource("2_kpksc")
-
-[node name="DeathBox" parent="Jaw" instance=ExtResource("4_ce856")]
-position = Vector2(-26, 87)
-
-[node name="CollisionPolygon2D" parent="Jaw/DeathBox" index="0"]
-polygon = PackedVector2Array(21, -110, 45, -113, 41, 16, -42, 47, -48, -28, 12, -33)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_6sdrm")
@@ -220,8 +191,39 @@ shape = SubResource("CircleShape2D_fkk5i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ykqqa")
 
+[node name="Mirrorer" type="Node2D" parent="."]
+
+[node name="Head" type="Node2D" parent="Mirrorer"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Head" type="Sprite2D" parent="Mirrorer/Head"]
+position = Vector2(-129, -71)
+texture = ExtResource("1_cgm0t")
+
+[node name="DeathBox" parent="Mirrorer/Head" instance=ExtResource("4_ce856")]
+position = Vector2(-7.21248, 52.4578)
+rotation = -0.530271
+
+[node name="CollisionPolygon2D" parent="Mirrorer/Head/DeathBox" index="0"]
+position = Vector2(-87, 22)
+polygon = PackedVector2Array(89.762, -36.7516, 26.4584, -62.5326, 52.2589, -140.271, 145.557, -275.679, 311.369, -194.696, 258.469, -66.9003, 175.001, -8.35603)
+
+[node name="Jaw" type="Node2D" parent="Mirrorer"]
+rotation = -0.426836
+scale = Vector2(0.5, 0.5)
+
+[node name="Jaw" type="Sprite2D" parent="Mirrorer/Jaw"]
+position = Vector2(-130, -68)
+texture = ExtResource("2_kpksc")
+
+[node name="DeathBox" parent="Mirrorer/Jaw" instance=ExtResource("4_ce856")]
+position = Vector2(-26, 87)
+
+[node name="CollisionPolygon2D" parent="Mirrorer/Jaw/DeathBox" index="0"]
+polygon = PackedVector2Array(21, -110, 45, -113, 41, 16, -42, 47, -48, -28, 12, -33)
+
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
 
-[editable path="Head/DeathBox"]
-[editable path="Jaw/DeathBox"]
+[editable path="Mirrorer/Head/DeathBox"]
+[editable path="Mirrorer/Jaw/DeathBox"]
