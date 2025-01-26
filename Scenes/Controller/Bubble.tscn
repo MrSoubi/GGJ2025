@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bghtut87flilb"]
+[gd_scene load_steps=22 format=3 uid="uid://bghtut87flilb"]
 
 [ext_resource type="Script" path="res://Scripts/Controller/BubbleController.gd" id="1_bps88"]
 [ext_resource type="Texture2D" uid="uid://hml04ph71ufy" path="res://Textures/FloatingBubble/spr_1.png" id="2_im8h5"]
@@ -107,6 +107,9 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4sahh"]
+polygon = PackedVector2Array(0, -85, -31, -77, -54, -61, -69, -38, -77, -10, -74, 22, -65, 43, -51, 62, -31, 77, -1, 85, 23, 80, 43, 70, 58, 56, 68, 39, 75, 20, 78, 3, 76, -22, 68, -45, 56, -62, 36, -76, 18, -83)
+
 [node name="Bubble" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_arfop")
 gravity_scale = 0.0
@@ -131,3 +134,8 @@ frame_progress = 0.293827
 [node name="PopSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_1x1no")
 bus = &"SFX"
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+occluder = SubResource("OccluderPolygon2D_4sahh")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cji6t7sxsx4s3"]
+[gd_scene load_steps=7 format=3 uid="uid://v15a7aqwuwi4"]
 
-[ext_resource type="Texture2D" uid="uid://ddgejvskjvkkh" path="res://Textures/particle_bubble.png" id="1_1mvca"]
+[ext_resource type="Texture2D" uid="uid://cvxja07ojc0fq" path="res://Textures/lumiere.png" id="1_eaib1"]
 
 [sub_resource type="Curve" id="Curve_425a8"]
 _data = [Vector2(0, 0.420954), 0.0, 0.0, 0, 0, Vector2(0.946372, 1), 0.0, 0.0, 0, 0, Vector2(0.996845, 0), 0.0, 0.0, 0, 0]
@@ -47,7 +47,7 @@ light_mask = 2
 visibility_layer = 2
 amount = 1500
 process_material = SubResource("ParticleProcessMaterial_6t4ws")
-texture = ExtResource("1_1mvca")
+texture = ExtResource("1_eaib1")
 lifetime = 20.0
 preprocess = 20.0
 fixed_fps = 60
