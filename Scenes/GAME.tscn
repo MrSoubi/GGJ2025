@@ -10,21 +10,21 @@
 [ext_resource type="Resource" uid="uid://drhxe8x7smwg1" path="res://Data/LevelDefinitions/LevelDefinition_3.tres" id="5_rmitb"]
 [ext_resource type="Resource" uid="uid://cytihvogyojqw" path="res://Data/LevelDefinitions/LevelDefinition_4.tres" id="6_1vm4i"]
 [ext_resource type="Resource" uid="uid://b58o2yon57swk" path="res://Data/LevelDefinitions/LevelDefinition_5.tres" id="7_xriwq"]
-[ext_resource type="Resource" uid="uid://g15khqqiv6ll" path="res://Data/LevelDefinitions/LevelDefinition_6.tres" id="8_va1s3"]
-[ext_resource type="Resource" uid="uid://cs7mcqlxqblug" path="res://Data/LevelDefinitions/LevelDefinition_7.tres" id="9_byw7l"]
-[ext_resource type="Resource" uid="uid://6ddx8saboed1" path="res://Data/LevelDefinitions/LevelDefinition_8.tres" id="10_pqhab"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_6.tres" id="8_va1s3"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_7.tres" id="9_byw7l"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_8.tres" id="10_pqhab"]
 [ext_resource type="Script" path="res://Scripts/UI/fader.gd" id="11_jqnl6"]
-[ext_resource type="Resource" uid="uid://c2e2hiqy3bf03" path="res://Data/LevelDefinitions/LevelDefinition_9.tres" id="11_wlila"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_9.tres" id="11_wlila"]
 [ext_resource type="Script" path="res://Scripts/music.gd" id="12_5274v"]
-[ext_resource type="Resource" uid="uid://bu3et2wi1d10q" path="res://Data/LevelDefinitions/LevelDefinition_10.tres" id="12_heyj3"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_10.tres" id="12_heyj3"]
 [ext_resource type="AudioStream" uid="uid://bv7fkqylfcwft" path="res://Sounds/Music/ambient-soundscape-glitch-bells-276232.mp3" id="13_22oyc"]
 [ext_resource type="Resource" uid="uid://bovm0s1m8kie4" path="res://Data/LevelDefinitions/LevelDefinition_11.tres" id="13_70uwb"]
 [ext_resource type="AudioStream" uid="uid://c5yohh7tgtux3" path="res://Sounds/Music/mystical-music-54294.mp3" id="14_7lmy1"]
 [ext_resource type="Resource" uid="uid://g1yyisuop76l" path="res://Data/LevelDefinitions/LevelDefinition_12.tres" id="14_y3dyn"]
 [ext_resource type="AudioStream" uid="uid://d4j2nvlmjvmry" path="res://Sounds/SFX/Pianoroll_Win.wav" id="15_b8kxo"]
-[ext_resource type="Resource" uid="uid://cxw8v0shn25du" path="res://Data/LevelDefinitions/LevelDefinition_13.tres" id="15_gqd50"]
-[ext_resource type="Resource" uid="uid://doegkjlu8ln1v" path="res://Data/LevelDefinitions/LevelDefinition_14.tres" id="16_aynka"]
-[ext_resource type="Resource" uid="uid://b8bkgo4fhccue" path="res://Data/LevelDefinitions/LevelDefinition_15.tres" id="17_n5t8c"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_13.tres" id="15_gqd50"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_14.tres" id="16_aynka"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_15.tres" id="17_n5t8c"]
 [ext_resource type="PackedScene" uid="uid://b3ycc6uiruc7s" path="res://Misc/Axelle.tscn" id="21_qus44"]
 [ext_resource type="PackedScene" uid="uid://1alyatohm5cf" path="res://Misc/Baptiste.tscn" id="22_8qwxy"]
 [ext_resource type="PackedScene" uid="uid://daos25y64fhnq" path="res://Misc/Eliot.tscn" id="23_ps8qk"]
@@ -32,6 +32,13 @@
 [ext_resource type="PackedScene" uid="uid://cuxx5l3s5n3qo" path="res://Misc/Marion.tscn" id="25_s2nf1"]
 [ext_resource type="PackedScene" uid="uid://bdp753ysn1333" path="res://Misc/Romane.tscn" id="26_hip5k"]
 [ext_resource type="PackedScene" uid="uid://c3dyw4u35igyn" path="res://Misc/Thomy.tscn" id="27_61vcb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1881e"]
+friction = 0.0
+bounce = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1dl7"]
+size = Vector2(371, 1773)
 
 [sub_resource type="Animation" id="Animation_wgb83"]
 length = 0.001
@@ -86,13 +93,6 @@ _data = {
 "fade_to_black": SubResource("Animation_s7vw0"),
 "fade_to_normal": SubResource("Animation_hn55g")
 }
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1881e"]
-friction = 0.0
-bounce = 5.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1dl7"]
-size = Vector2(371, 1773)
 
 [sub_resource type="Animation" id="Animation_pdp78"]
 length = 0.001
@@ -249,31 +249,14 @@ levels = Array[ExtResource("2_8rtuw")]([ExtResource("3_vkcrv"), ExtResource("4_s
 process_mode = 1
 
 [node name="MainMenu" parent="." instance=ExtResource("2_lm705")]
+layer = -4
 
 [node name="LevelSelection" parent="." instance=ExtResource("3_4ea6p")]
 
 [node name="PauseMenu" parent="." instance=ExtResource("4_42c4y")]
 
-[node name="TransitionLayer" type="CanvasLayer" parent="."]
-script = ExtResource("11_jqnl6")
-
-[node name="ColorRect" type="ColorRect" parent="TransitionLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TransitionLayer"]
-libraries = {
-"": SubResource("AnimationLibrary_f3bko")
-}
-speed_scale = 0.5
-
 [node name="TeamBubbles" type="Node2D" parent="."]
 process_mode = 3
-z_index = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TeamBubbles"]
 physics_material_override = SubResource("PhysicsMaterial_1881e")
@@ -337,6 +320,23 @@ position = Vector2(1544, 107)
 [node name="FaceBubble7" parent="TeamBubbles" instance=ExtResource("27_61vcb")]
 process_mode = 0
 position = Vector2(1768, 122)
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+script = ExtResource("11_jqnl6")
+
+[node name="ColorRect" type="ColorRect" parent="TransitionLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TransitionLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_f3bko")
+}
+speed_scale = 0.5
 
 [node name="Music" type="Node" parent="."]
 process_mode = 3
