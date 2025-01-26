@@ -2,13 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_tvgh1"]
 [ext_resource type="TileSet" uid="uid://b4swxwaj7usof" path="res://TileSets/tile_set_mossy.tres" id="2_wyltq"]
-[ext_resource type="PackedScene" uid="uid://cx71kpja7yl8g" path="res://Scenes/Props/aku_aku.tscn" id="3_8htse"]
+[ext_resource type="PackedScene" uid="uid://dklylh2qfh3xa" path="res://Scenes/Props/aku_aku.tscn" id="3_8htse"]
 
 [node name="Level2" instance=ExtResource("1_tvgh1")]
 
 [node name="Aku-Aku" parent="Props" index="0" instance=ExtResource("3_8htse")]
 position = Vector2(-753, 233)
-speed = 110.0
 
 [node name="LevelGoal" parent="." index="3"]
 position = Vector2(1744, 559)
@@ -22,5 +21,5 @@ tile_map_data = PackedByteArray("AAAQAP//AAABAAEAAAAQAP7/AAABAAEAAAAQAP3/AAABAAE
 tile_set = ExtResource("2_wyltq")
 
 [editable path="Props/Aku-Aku"]
-[editable path="Props/Aku-Aku/Head/DeathBox"]
-[editable path="Props/Aku-Aku/Jaw/DeathBox"]
+[editable path="Props/Aku-Aku/Mirrorer/Head/DeathBox"]
+[editable path="Props/Aku-Aku/Mirrorer/Jaw/DeathBox"]
