@@ -6,6 +6,10 @@
 
 [node name="BackGround" instance=ExtResource("1_ij63o")]
 
+[node name="ParallaxBackground" parent="." index="0"]
+scale = Vector2(4, 4)
+transform = Transform2D(4, 0, 0, 4, 960, 540)
+
 [node name="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
 texture = ExtResource("2_ywv16")
 
