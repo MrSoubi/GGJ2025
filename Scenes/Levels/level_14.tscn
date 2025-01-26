@@ -21,5 +21,5 @@ tile_map_data = PackedByteArray("AAAQAP//AAABAAEAAAAQAP7/AAABAAEAAAAQAP3/AAABAAE
 tile_set = ExtResource("2_wyltq")
 
 [editable path="Props/Aku-Aku"]
-[editable path="Props/Aku-Aku/Head/DeathBox"]
-[editable path="Props/Aku-Aku/Jaw/DeathBox"]
+[editable path="Props/Aku-Aku/Mirrorer/Head/DeathBox"]
+[editable path="Props/Aku-Aku/Mirrorer/Jaw/DeathBox"]

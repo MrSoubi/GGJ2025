@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=4 uid="uid://c6mltbmtaiws2"]
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_s6iam"]
-[ext_resource type="PackedScene" uid="uid://dffrbyrblyasr" path="res://Scenes/Props/classic_spike.tscn" id="2_ol4rp"]
 [ext_resource type="TileSet" uid="uid://b4swxwaj7usof" path="res://TileSets/tile_set_mossy.tres" id="4_hvxj0"]
+[ext_resource type="PackedScene" uid="uid://b5jyko124yykc" path="res://Scenes/Props/spike_wall.tscn" id="4_ulkpp"]
 
 [node name="Level" instance=ExtResource("1_s6iam")]
 
-[node name="ClassicSpike" parent="Props" index="0" instance=ExtResource("2_ol4rp")]
-position = Vector2(-895, 504)
-scale = Vector2(2.08, 5.6)
+[node name="SpikeWall" parent="Props" index="0" instance=ExtResource("4_ulkpp")]
+position = Vector2(-893, 587)
+scale = Vector2(0.76664, 0.76664)
 
 [node name="LevelGoal" parent="." index="3"]
 position = Vector2(1386, 728)

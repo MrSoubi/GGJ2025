@@ -17,12 +17,6 @@ tile_set = ExtResource("2_ipu30")
 [node name="Aku-Aku" parent="." index="8" instance=ExtResource("3_lkhlt")]
 position = Vector2(-1554, 538)
 
-[node name="Head" parent="Aku-Aku" index="0"]
-scale = Vector2(2.31, 2.31)
-
-[node name="Jaw" parent="Aku-Aku" index="1"]
-scale = Vector2(2.31, 2.31)
-
 [editable path="Aku-Aku"]
-[editable path="Aku-Aku/Head/DeathBox"]
-[editable path="Aku-Aku/Jaw/DeathBox"]
+[editable path="Aku-Aku/Mirrorer/Head/DeathBox"]
+[editable path="Aku-Aku/Mirrorer/Jaw/DeathBox"]
