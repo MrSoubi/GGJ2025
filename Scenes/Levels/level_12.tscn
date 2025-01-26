@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2q5dhxd3qxtx"]
+
+[ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_i81ca"]
+[ext_resource type="PackedScene" uid="uid://bqatxnb17rdos" path="res://Scenes/Props/turning_blocker.tscn" id="2_psgxq"]
+
+[node name="Level" instance=ExtResource("1_i81ca")]
+
+[node name="Node2D" parent="." index="8" instance=ExtResource("2_psgxq")]
+position = Vector2(1192, 591)

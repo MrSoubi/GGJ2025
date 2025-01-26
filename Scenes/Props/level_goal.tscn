@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cvxja07ojc0fq" path="res://Textures/lumiere.png" id="3_2o2hl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7kaxc"]
+radius = 13.8953
 
 [sub_resource type="Gradient" id="Gradient_o3fb4"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
