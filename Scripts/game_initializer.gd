@@ -31,17 +31,14 @@ func _ready() -> void:
 func enable_main_menu() -> void:
 	RSE_ENTERED_MAIN_MENU.triggered.emit()
 	
-	transition_layer.transition()
-	await transition_layer.on_transition_finished
-	
 	main_menu.visible = true
 	level_selection.visible = false
 	pause_menu.visible = false
-	get_tree().paused = true
+	get_tree().paused = false
 	
 	team_bubbles.visible = true
 	team_bubbles.process_mode = Node.PROCESS_MODE_ALWAYS
-	
+
 
 func restart_level():
 	transition_layer.transition()
@@ -122,6 +119,9 @@ func _on_main_menu_button_settings_pressed() -> void:
 	pass # Replace with function body.
 
 func _on_level_selection_button_go_back_to_main_menu_pressed() -> void:
+	transition_layer.transition()
+	await transition_layer.on_transition_finished
+	
 	enable_main_menu()
 
 func _on_level_selection_level_selected(level_index: int) -> void:
@@ -146,6 +146,9 @@ func _on_pause_menu_resume_button_pressed() -> void:
 	pause_menu.visible = false
 
 func _on_pause_menu_to_main_menu_button_pressed() -> void:
+	transition_layer.transition()
+	await transition_layer.on_transition_finished
+	
 	if current_level:
 		current_level.queue_free()
 	enable_main_menu()
