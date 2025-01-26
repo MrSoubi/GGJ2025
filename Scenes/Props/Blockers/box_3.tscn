@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2to5y5mkyjkp"]
+
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/Blockers/blocker_template.tscn" id="1_jok1g"]
+[ext_resource type="Texture2D" uid="uid://ctd0sv7o6w6fj" path="res://Textures/Boxes/long_box_destroyed.png" id="2_oy85q"]
+
+[node name="Blocker" instance=ExtResource("1_jok1g")]
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+polygon = PackedVector2Array(-82, 592, 83, 591, 85, -591, -84, -591)
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_oy85q")

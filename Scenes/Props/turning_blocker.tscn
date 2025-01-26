@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bqatxnb17rdos"]
 
-[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="1_k8q06"]
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/Blockers/blocker_template.tscn" id="1_k8q06"]
 
 [sub_resource type="Animation" id="Animation_aryd7"]
 resource_name = "RollingBlocker"
