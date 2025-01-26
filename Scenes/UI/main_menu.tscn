@@ -1,8 +1,31 @@
-[gd_scene load_steps=7 format=3 uid="uid://d31cs2fvr1s4e"]
+[gd_scene load_steps=19 format=3 uid="uid://d31cs2fvr1s4e"]
 
 [ext_resource type="Script" path="res://Scripts/UI/main_menu.gd" id="1_3sp0j"]
 [ext_resource type="Texture2D" uid="uid://d32gb5hv0rn21" path="res://Textures/Backgrounds/main_menu_background.png" id="2_agd4h"]
 [ext_resource type="Texture2D" uid="uid://di2aooj6sucj2" path="res://Textures/title.png" id="2_qdk2y"]
+[ext_resource type="FontFile" uid="uid://c0ymilsqh56kj" path="res://Wonderly.otf" id="4_v6bwk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ruyn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_acweg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a0t47"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jc5v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3hdmg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4tjpl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ebept"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rsd1p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13ok0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vniu6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fm6hi"]
 
 [sub_resource type="GDScript" id="GDScript_10vh1"]
 script/source = "extends Button
@@ -56,51 +79,84 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 100
+theme_override_constants/separation = 40
 
 [node name="Header" type="CenterContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Header"]
-custom_minimum_size = Vector2(2.345, 0)
 layout_mode = 2
 texture = ExtResource("2_qdk2y")
+stretch_mode = 3
 
 [node name="Body" type="CenterContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Body"]
 layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="ButtonPlay" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_v6bwk")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ruyn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_acweg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_a0t47")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5jc5v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3hdmg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4tjpl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ebept")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rsd1p")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13ok0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vniu6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fm6hi")
 text = "PLAY"
 script = SubResource("GDScript_10vh1")
 
 [node name="ButtonSettings" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_v6bwk")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ruyn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_acweg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_a0t47")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5jc5v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3hdmg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4tjpl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ebept")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rsd1p")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13ok0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vniu6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fm6hi")
 text = "SETTINGS"
 script = SubResource("GDScript_0jscs")
 
 [node name="ButtonExit" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_v6bwk")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ruyn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_acweg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_a0t47")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5jc5v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3hdmg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4tjpl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ebept")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rsd1p")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13ok0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vniu6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fm6hi")
 text = "EXIT"
 script = SubResource("GDScript_ecpc7")
-
-[node name="Footer" type="CenterContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="LabelCredits" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Footer"]
-layout_mode = 2
-text = "CREDITS"
 
 [connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer/ButtonPlay" to="." method="_on_button_play_pressed"]
 [connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/Body/VBoxContainer/ButtonSettings" to="." method="_on_button_settings_pressed"]

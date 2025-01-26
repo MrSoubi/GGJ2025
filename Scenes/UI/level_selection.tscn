@@ -1,23 +1,47 @@
-[gd_scene load_steps=19 format=3 uid="uid://dyrhu210phwla"]
+[gd_scene load_steps=32 format=3 uid="uid://dyrhu210phwla"]
 
 [ext_resource type="Script" path="res://Scripts/UI/level_selection.gd" id="1_6qj4i"]
 [ext_resource type="PackedScene" uid="uid://cxw3spahdcohl" path="res://Scenes/UI/button_level.tscn" id="2_3cqf5"]
+[ext_resource type="Texture2D" uid="uid://d32gb5hv0rn21" path="res://Textures/Backgrounds/main_menu_background.png" id="2_7vun1"]
 [ext_resource type="Script" path="res://Scripts/UI/level_buttons_grid.gd" id="2_bcfnv"]
+[ext_resource type="FontFile" uid="uid://c0ymilsqh56kj" path="res://Wonderly.otf" id="3_hm6nv"]
 [ext_resource type="Resource" uid="uid://cjurevaug6tpt" path="res://Data/LevelDefinitions/LevelDefinition_1.tres" id="4_otqjr"]
 [ext_resource type="Resource" uid="uid://re4buuymb8wg" path="res://Data/LevelDefinitions/LevelDefinition_2.tres" id="5_jg3kp"]
 [ext_resource type="Resource" uid="uid://drhxe8x7smwg1" path="res://Data/LevelDefinitions/LevelDefinition_3.tres" id="6_muyrr"]
 [ext_resource type="Resource" uid="uid://cytihvogyojqw" path="res://Data/LevelDefinitions/LevelDefinition_4.tres" id="7_m4rgy"]
 [ext_resource type="Resource" uid="uid://b58o2yon57swk" path="res://Data/LevelDefinitions/LevelDefinition_5.tres" id="8_tvehr"]
-[ext_resource type="Resource" uid="uid://g15khqqiv6ll" path="res://Data/LevelDefinitions/LevelDefinition_6.tres" id="9_noq31"]
-[ext_resource type="Resource" uid="uid://cs7mcqlxqblug" path="res://Data/LevelDefinitions/LevelDefinition_7.tres" id="10_7augb"]
-[ext_resource type="Resource" uid="uid://6ddx8saboed1" path="res://Data/LevelDefinitions/LevelDefinition_8.tres" id="11_u85jj"]
-[ext_resource type="Resource" uid="uid://c2e2hiqy3bf03" path="res://Data/LevelDefinitions/LevelDefinition_9.tres" id="12_b4njb"]
-[ext_resource type="Resource" uid="uid://bu3et2wi1d10q" path="res://Data/LevelDefinitions/LevelDefinition_10.tres" id="13_icpu6"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_6.tres" id="9_noq31"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_7.tres" id="10_7augb"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_8.tres" id="11_u85jj"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_9.tres" id="12_b4njb"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_10.tres" id="13_icpu6"]
 [ext_resource type="Resource" uid="uid://bovm0s1m8kie4" path="res://Data/LevelDefinitions/LevelDefinition_11.tres" id="14_kxk1p"]
 [ext_resource type="Resource" uid="uid://g1yyisuop76l" path="res://Data/LevelDefinitions/LevelDefinition_12.tres" id="15_fjkl2"]
-[ext_resource type="Resource" uid="uid://cxw8v0shn25du" path="res://Data/LevelDefinitions/LevelDefinition_13.tres" id="16_51haf"]
-[ext_resource type="Resource" uid="uid://doegkjlu8ln1v" path="res://Data/LevelDefinitions/LevelDefinition_14.tres" id="17_kqo3c"]
-[ext_resource type="Resource" uid="uid://b8bkgo4fhccue" path="res://Data/LevelDefinitions/LevelDefinition_15.tres" id="18_478dg"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_13.tres" id="16_51haf"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_14.tres" id="17_kqo3c"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_15.tres" id="18_478dg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p12xi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q3bvo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gojuh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5xqv5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ddrwj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m4553"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vtk7i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gfk2j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25tdg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gd35g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fjd5"]
 
 [node name="LevelSelection" type="CanvasLayer"]
 process_mode = 3
@@ -29,6 +53,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_7vun1")
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
 layout_mode = 1
@@ -51,6 +76,9 @@ layout_mode = 2
 
 [node name="LabelTitle" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hm6nv")
+theme_override_font_sizes/font_size = 60
 text = "LEVEL SELECTION"
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
@@ -146,6 +174,20 @@ layout_mode = 2
 
 [node name="ButtonExit" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/Footer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.755558, 0, 0.14578, 1)
+theme_override_fonts/font = ExtResource("3_hm6nv")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p12xi")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_q3bvo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gojuh")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5xqv5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ddrwj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_m4553")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vtk7i")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_gfk2j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_25tdg")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_gd35g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8fjd5")
 text = "GO BACK TO MAIN MENU"
 
 [connection signal="button_level_pressed" from="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer" to="." method="_on_grid_container_button_level_pressed"]

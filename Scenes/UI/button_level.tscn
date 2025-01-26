@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxw3spahdcohl"]
+[gd_scene load_steps=3 format=3 uid="uid://cxw3spahdcohl"]
 
+[ext_resource type="FontFile" uid="uid://c0ymilsqh56kj" path="res://Wonderly.otf" id="1_klul2"]
 [ext_resource type="Script" path="res://Scripts/UI/button_level.gd" id="1_xfgg3"]
 
 [node name="ButtonLevel" type="Button"]
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_klul2")
+theme_override_font_sizes/font_size = 60
 text = "Level 1"
 script = ExtResource("1_xfgg3")
 

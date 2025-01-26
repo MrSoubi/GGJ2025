@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6tpbfe7iim2i"]
+[gd_scene load_steps=5 format=3 uid="uid://c6tpbfe7iim2i"]
 
 [ext_resource type="PackedScene" uid="uid://byvf5e708hwkv" path="res://Scenes/Controller/camera_2d.tscn" id="1_rbayg"]
 [ext_resource type="PackedScene" uid="uid://ct37jifcrdty2" path="res://Scenes/Props/level_goal.tscn" id="3_epthy"]
 [ext_resource type="PackedScene" uid="uid://dd3xx7tbujps7" path="res://Scenes/Props/bubble_spawner.tscn" id="3_st03q"]
-[ext_resource type="PackedScene" path="res://Scenes/Controller/mouse_propulsion_pointer.tscn" id="6_mj0ue"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_orxr1"]
-font_size = 80
+[ext_resource type="PackedScene" uid="uid://bk6g6ibegcxj6" path="res://Scenes/Controller/mouse_propulsion_pointer.tscn" id="6_mj0ue"]
 
 [node name="Level2" type="Node2D"]
 process_mode = 1
@@ -16,28 +13,6 @@ position = Vector2(979, 513)
 
 [node name="Props" type="Node2D" parent="."]
 position = Vector2(1861, 230)
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -29.5
-offset_right = 29.5
-offset_bottom = 23.0
-grow_horizontal = 2
-text = "LEVEL 1"
-label_settings = SubResource("LabelSettings_orxr1")
 
 [node name="LevelGoal" parent="." instance=ExtResource("3_epthy")]
 position = Vector2(1699, 483)
