@@ -29,4 +29,4 @@ func start_sound():
 
 func stop_sound():
 	var tween := create_tween()
-	tween.tween_property(sfx,"volume_db",-80,0.5)
+	tween.tween_property(sfx,"volume_db",-80,2)

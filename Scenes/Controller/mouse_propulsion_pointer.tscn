@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://bk6g6ibegcxj6"]
+[gd_scene load_steps=19 format=3 uid="uid://bk6g6ibegcxj6"]
 
 [ext_resource type="Script" path="res://Scripts/Controller/mouse_propulsion_pointer.gd" id="1_etp5d"]
 [ext_resource type="Texture2D" uid="uid://d0ma5eppbwgnd" path="res://Textures/mouse_propulsion_pointer_anim.png" id="2_pe0od"]
 [ext_resource type="PackedScene" uid="uid://2hw3q25jaeqf" path="res://Particles/Wind/ventilation_particles.tscn" id="3_xhv8c"]
+[ext_resource type="AudioStream" uid="uid://dvuienpduweki" path="res://Sounds/SFX/playerblow_mixage final.wav" id="4_ts87o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1v0k"]
 atlas = ExtResource("2_pe0od")
@@ -109,3 +110,7 @@ process_material = SubResource("ParticleProcessMaterial_r0vta")
 lifetime = 1.0
 preprocess = 0.0
 randomness = 0.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ts87o")
+bus = &"SFX"
