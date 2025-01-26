@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dd3xx7tbujps7"]
+[gd_scene load_steps=3 format=3 uid="uid://dd3xx7tbujps7"]
 
 [ext_resource type="Script" path="res://Scripts/Props/bubble_spawner.gd" id="1_7n47c"]
+[ext_resource type="Texture2D" uid="uid://dpxhdu5s70r04" path="res://Textures/chaudron_potion.png" id="2_pah3y"]
 
 [node name="BubbleSpawner" type="Node2D"]
 script = ExtResource("1_7n47c")
@@ -9,3 +10,7 @@ script = ExtResource("1_7n47c")
 offset_right = 40.0
 offset_bottom = 23.0
 text = "🫧🏁BubbleSpawner"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 182)
+texture = ExtResource("2_pah3y")
