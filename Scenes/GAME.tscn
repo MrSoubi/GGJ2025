@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cnj5ko8x6ace8"]
+[gd_scene load_steps=48 format=3 uid="uid://cnj5ko8x6ace8"]
 
 [ext_resource type="Script" path="res://Scripts/game_initializer.gd" id="1_hfhqi"]
 [ext_resource type="Script" path="res://Scripts/LevelDefinitions/level_definition.gd" id="2_8rtuw"]
@@ -22,9 +22,9 @@
 [ext_resource type="AudioStream" uid="uid://c5yohh7tgtux3" path="res://Sounds/Music/mystical-music-54294.mp3" id="14_7lmy1"]
 [ext_resource type="Resource" uid="uid://g1yyisuop76l" path="res://Data/LevelDefinitions/LevelDefinition_12.tres" id="14_y3dyn"]
 [ext_resource type="AudioStream" uid="uid://d4j2nvlmjvmry" path="res://Sounds/SFX/Pianoroll_Win.wav" id="15_b8kxo"]
-[ext_resource type="Resource" uid="uid://cxw8v0shn25du" path="res://Data/LevelDefinitions/LevelDefinition_13.tres" id="15_gqd50"]
-[ext_resource type="Resource" uid="uid://doegkjlu8ln1v" path="res://Data/LevelDefinitions/LevelDefinition_14.tres" id="16_aynka"]
-[ext_resource type="Resource" uid="uid://b8bkgo4fhccue" path="res://Data/LevelDefinitions/LevelDefinition_15.tres" id="17_n5t8c"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_13.tres" id="15_gqd50"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_14.tres" id="16_aynka"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_15.tres" id="17_n5t8c"]
 [ext_resource type="Resource" uid="uid://be27ckm8v3637" path="res://Data/LevelDefinitions/LevelDefinition_16.tres" id="18_3kdfl"]
 [ext_resource type="Resource" uid="uid://cx0hrhxidd77m" path="res://Data/LevelDefinitions/LevelDefinition_17.tres" id="19_5eake"]
 [ext_resource type="PackedScene" uid="uid://b3ycc6uiruc7s" path="res://Misc/Axelle.tscn" id="21_qus44"]
@@ -243,6 +243,18 @@ _data = {
 "to_main_menu": SubResource("Animation_ielpw")
 }
 
+[sub_resource type="Gradient" id="Gradient_oxdy4"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.563131, 0.689394, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.232323, 0, 0, 0, 0.372549, 0, 0, 0, 0.65098)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ho2jq"]
+gradient = SubResource("Gradient_oxdy4")
+width = 1920
+height = 1080
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Node" type="Node"]
 process_mode = 3
 script = ExtResource("1_hfhqi")
@@ -369,6 +381,14 @@ libraries = {
 [node name="IntroVideo" parent="." instance=ExtResource("33_leenk")]
 mouse_filter = 2
 autoplay = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_ho2jq")
 
 [connection signal="button_exit_pressed" from="MainMenu" to="." method="_on_main_menu_button_exit_pressed"]
 [connection signal="button_play_pressed" from="MainMenu" to="." method="_on_main_menu_button_play_pressed"]
