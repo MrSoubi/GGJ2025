@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3dyw4u35igyn"]
+
+[ext_resource type="PackedScene" uid="uid://biq0dndkyarlq" path="res://Misc/face_bubble.tscn" id="1_i6yce"]
+[ext_resource type="Texture2D" uid="uid://lqoys4bprylq" path="res://Textures/Faces/Thomy.png" id="2_54alh"]
+
+[node name="FaceBubble" instance=ExtResource("1_i6yce")]
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2(-1, -10)
+scale = Vector2(0.889398, 0.889398)
+texture = ExtResource("2_54alh")

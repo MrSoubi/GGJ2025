@@ -25,7 +25,7 @@ func _ready() -> void:
 	main_menu.visible = true
 	level_selection.visible = false
 	pause_menu.visible = false
-	get_tree().paused = true
+	get_tree().paused = false
 
 func enable_main_menu() -> void:
 	RSE_ENTERED_MAIN_MENU.triggered.emit()

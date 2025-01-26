@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://biq0dndkyarlq"]
+
+[ext_resource type="Texture2D" uid="uid://d162lh06onlw2" path="res://Textures/Faces/Axelle.png" id="1_g6h4o"]
+[ext_resource type="Script" path="res://Misc/face_bubble.gd" id="1_m5tk1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w324x"]
+friction = 0.0
+bounce = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2er41"]
+radius = 71.007
+
+[node name="FaceBubble" type="RigidBody2D"]
+process_mode = 3
+input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_w324x")
+script = ExtResource("1_m5tk1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2er41")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-7, 13)
+texture = ExtResource("1_g6h4o")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
