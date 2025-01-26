@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btcsutahhrwly"
-path="res://.godot/imported/arche + meuble colo.png-27032f6f63ab4c0d8dab045e38356908.ctex"
+uid="uid://chyno2pkhwfqo"
+path="res://.godot/imported/foret 2.1.png-e73c77b4d66b457c95a32b978b4afd42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/InteriorLayers/arche + meuble colo.png"
-dest_files=["res://.godot/imported/arche + meuble colo.png-27032f6f63ab4c0d8dab045e38356908.ctex"]
+source_file="res://Textures/Backgrounds/Forest_2/foret 2.1.png"
+dest_files=["res://.godot/imported/foret 2.1.png-e73c77b4d66b457c95a32b978b4afd42.ctex"]
 
 [params]
 

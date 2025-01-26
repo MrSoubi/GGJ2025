@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://0s71stesl5v5"]
+
+[ext_resource type="PackedScene" uid="uid://dddqivenhmajr" path="res://Scenes/Backgrounds/back_ground_template.tscn" id="1_ij63o"]
+[ext_resource type="Texture2D" uid="uid://dpdbiokcmh08j" path="res://Textures/Backgrounds/Forest_3/foret 2.2 bis.png" id="2_ywv16"]
+[ext_resource type="Texture2D" uid="uid://b8j3pol5resj7" path="res://Textures/Backgrounds/Forest_3/foret 2 .1 bis.png" id="3_j25qf"]
+
+[node name="BackGround" instance=ExtResource("1_ij63o")]
+
+[node name="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+texture = ExtResource("2_ywv16")
+
+[node name="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+texture = ExtResource("3_j25qf")

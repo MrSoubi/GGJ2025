@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://c6tpbfe7iim2i"]
 
-[ext_resource type="PackedScene" path="res://Scenes/Props/back_ground.tscn" id="1_7ngcu"]
+[ext_resource type="PackedScene" uid="uid://dddqivenhmajr" path="res://Scenes/Backgrounds/back_ground_template.tscn" id="1_7ngcu"]
 [ext_resource type="PackedScene" uid="uid://byvf5e708hwkv" path="res://Scenes/Controller/camera_2d.tscn" id="1_rbayg"]
 [ext_resource type="PackedScene" uid="uid://ct37jifcrdty2" path="res://Scenes/Props/level_goal.tscn" id="3_epthy"]
 [ext_resource type="PackedScene" uid="uid://dd3xx7tbujps7" path="res://Scenes/Props/bubble_spawner.tscn" id="3_st03q"]
-[ext_resource type="PackedScene" path="res://Scenes/Controller/mouse_propulsion_pointer.tscn" id="6_mj0ue"]
+[ext_resource type="PackedScene" uid="uid://bk6g6ibegcxj6" path="res://Scenes/Controller/mouse_propulsion_pointer.tscn" id="6_mj0ue"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_orxr1"]
 font_size = 80
