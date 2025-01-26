@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://1alyatohm5cf"]
+
+[ext_resource type="PackedScene" uid="uid://biq0dndkyarlq" path="res://Misc/face_bubble.tscn" id="1_lolvv"]
+[ext_resource type="Texture2D" uid="uid://drfhk2smrn0df" path="res://Textures/Faces/Baptiste.png" id="2_kuojc"]
+
+[node name="FaceBubble" instance=ExtResource("1_lolvv")]
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2(2, -6)
+texture = ExtResource("2_kuojc")

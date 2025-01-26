@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d31cs2fvr1s4e"]
+[gd_scene load_steps=6 format=3 uid="uid://d31cs2fvr1s4e"]
 
 [ext_resource type="Script" path="res://Scripts/UI/main_menu.gd" id="1_3sp0j"]
+[ext_resource type="Texture2D" uid="uid://di2aooj6sucj2" path="res://Textures/title.png" id="2_qdk2y"]
 
 [sub_resource type="GDScript" id="GDScript_10vh1"]
 script/source = "extends Button
@@ -64,9 +65,10 @@ theme_override_constants/separation = 100
 [node name="Header" type="CenterContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="LabelTitle" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Header"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Header"]
+custom_minimum_size = Vector2(2.345, 0)
 layout_mode = 2
-text = "TITLE"
+texture = ExtResource("2_qdk2y")
 
 [node name="Body" type="CenterContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
