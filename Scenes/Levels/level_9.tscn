@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_5djyj"]
 [ext_resource type="TileSet" uid="uid://b4swxwaj7usof" path="res://TileSets/tile_set_mossy.tres" id="2_ohjwi"]
-[ext_resource type="PackedScene" uid="uid://dffrbyrblyasr" path="res://Scenes/Props/classic_spike.tscn" id="3_3u1kt"]
-[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/blocker.tscn" id="3_6vn0y"]
+[ext_resource type="PackedScene" path="res://Scenes/Props/classic_spike.tscn" id="3_3u1kt"]
+[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/Blockers/blocker_template.tscn" id="3_6vn0y"]
 
 [sub_resource type="Animation" id="Animation_ax16w"]
 resource_name = "BigWallAnim"
