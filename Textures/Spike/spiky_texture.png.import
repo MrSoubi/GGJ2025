@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dh6e35y2m3rct"
-path="res://.godot/imported/spiky_texture.png-ce212d6f8a3b0e04a0410f6e41ef53ea.ctex"
+path="res://.godot/imported/spiky_texture.png-5cae71bd2625e39ef6976ad1c6790452.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/spiky_texture.png"
-dest_files=["res://.godot/imported/spiky_texture.png-ce212d6f8a3b0e04a0410f6e41ef53ea.ctex"]
+source_file="res://Textures/Spike/spiky_texture.png"
+dest_files=["res://.godot/imported/spiky_texture.png-5cae71bd2625e39ef6976ad1c6790452.ctex"]
 
 [params]
 

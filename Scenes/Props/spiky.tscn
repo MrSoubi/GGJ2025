@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmxt4oo0jgryn"]
 
-[ext_resource type="Texture2D" uid="uid://dh6e35y2m3rct" path="res://Textures/spiky_texture.png" id="1_v2p5r"]
+[ext_resource type="Texture2D" uid="uid://dh6e35y2m3rct" path="res://Textures/Spike/spiky_texture.png" id="1_v2p5r"]
 [ext_resource type="PackedScene" uid="uid://xdjhonflspxe" path="res://Scenes/Props/DeathBox.tscn" id="2_nsmw6"]
 
 [node name="Spiky" type="Node2D"]

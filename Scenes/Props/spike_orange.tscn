@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c846lhetifjkt"]
+
+[ext_resource type="PackedScene" uid="uid://o1hn5ju7nd20" path="res://Scenes/Props/spike.tscn" id="1_x7a4w"]
+[ext_resource type="Texture2D" uid="uid://noxs4psc72os" path="res://Textures/Spike/spike_orange.png" id="2_ru287"]
+
+[node name="Node2D" instance=ExtResource("1_x7a4w")]
+texture = ExtResource("2_ru287")
+
+[editable path="DeathBox"]

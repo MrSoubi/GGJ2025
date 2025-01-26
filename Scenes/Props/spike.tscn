@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://o1hn5ju7nd20"]
+
+[ext_resource type="Texture2D" uid="uid://kgiykdtg2fe5" path="res://Textures/Spike/spike_yellow.png" id="1_85mtg"]
+[ext_resource type="PackedScene" uid="uid://xdjhonflspxe" path="res://Scenes/Props/DeathBox.tscn" id="2_vb43c"]
+
+[node name="Node2D" type="Sprite2D"]
+position = Vector2(0, -57)
+texture = ExtResource("1_85mtg")
+
+[node name="DeathBox" parent="." instance=ExtResource("2_vb43c")]
+
+[node name="CollisionPolygon2D" parent="DeathBox" index="0"]
+polygon = PackedVector2Array(19, -53, 19, 14, 12, 5, 8, 13, -6, -17, -24, 15, -35, -32, -43, 11, -60, -43, -83, 47, 85, 47, 69, 2, 64, 15, 55, -15, 49, 15)
+
+[editable path="DeathBox"]
