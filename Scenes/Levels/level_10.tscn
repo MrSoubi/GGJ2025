@@ -136,11 +136,11 @@ position = Vector2(3162, -1097)
 rotation = 0.261799
 scale = Vector2(4.75562, 8.97958)
 
-[node name="LevelGoal" parent="." index="3"]
+[node name="LevelGoal" parent="." index="2"]
 position = Vector2(6047, -2611)
 
-[node name="BubbleSpawner" parent="." index="4"]
-position = Vector2(479, 498)
+[node name="BubbleSpawner" parent="." index="3"]
+position = Vector2(479, 740)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="6"]
 scale = Vector2(0.3, 0.3)

@@ -13,4 +13,5 @@ text = "🫧🏁BubbleSpawner"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8, 182)
+scale = Vector2(0.76, 0.76)
 texture = ExtResource("2_pah3y")

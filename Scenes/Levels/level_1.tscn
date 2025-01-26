@@ -5,11 +5,11 @@
 
 [node name="Level" instance=ExtResource("1_7kyw7")]
 
-[node name="LevelGoal" parent="." index="3"]
+[node name="LevelGoal" parent="." index="2"]
 position = Vector2(1354, 711)
 
-[node name="BubbleSpawner" parent="." index="4"]
-position = Vector2(482, 560)
+[node name="BubbleSpawner" parent="." index="3"]
+position = Vector2(356, 584)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="6"]
 scale = Vector2(0.3, 0.3)

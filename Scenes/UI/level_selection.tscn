@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dyrhu210phwla"]
+[gd_scene load_steps=33 format=3 uid="uid://dyrhu210phwla"]
 
 [ext_resource type="Script" path="res://Scripts/UI/level_selection.gd" id="1_6qj4i"]
 [ext_resource type="PackedScene" uid="uid://cxw3spahdcohl" path="res://Scenes/UI/button_level.tscn" id="2_3cqf5"]
@@ -10,16 +10,17 @@
 [ext_resource type="Resource" uid="uid://drhxe8x7smwg1" path="res://Data/LevelDefinitions/LevelDefinition_3.tres" id="6_muyrr"]
 [ext_resource type="Resource" uid="uid://cytihvogyojqw" path="res://Data/LevelDefinitions/LevelDefinition_4.tres" id="7_m4rgy"]
 [ext_resource type="Resource" uid="uid://b58o2yon57swk" path="res://Data/LevelDefinitions/LevelDefinition_5.tres" id="8_tvehr"]
-[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_6.tres" id="9_noq31"]
-[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_7.tres" id="10_7augb"]
-[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_8.tres" id="11_u85jj"]
-[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_9.tres" id="12_b4njb"]
-[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_10.tres" id="13_icpu6"]
+[ext_resource type="Resource" uid="uid://g15khqqiv6ll" path="res://Data/LevelDefinitions/LevelDefinition_6.tres" id="9_noq31"]
+[ext_resource type="Resource" uid="uid://cs7mcqlxqblug" path="res://Data/LevelDefinitions/LevelDefinition_7.tres" id="10_7augb"]
+[ext_resource type="Resource" uid="uid://6ddx8saboed1" path="res://Data/LevelDefinitions/LevelDefinition_8.tres" id="11_u85jj"]
+[ext_resource type="Resource" uid="uid://c2e2hiqy3bf03" path="res://Data/LevelDefinitions/LevelDefinition_9.tres" id="12_b4njb"]
+[ext_resource type="Resource" uid="uid://bu3et2wi1d10q" path="res://Data/LevelDefinitions/LevelDefinition_10.tres" id="13_icpu6"]
 [ext_resource type="Resource" uid="uid://bovm0s1m8kie4" path="res://Data/LevelDefinitions/LevelDefinition_11.tres" id="14_kxk1p"]
 [ext_resource type="Resource" uid="uid://g1yyisuop76l" path="res://Data/LevelDefinitions/LevelDefinition_12.tres" id="15_fjkl2"]
-[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_13.tres" id="16_51haf"]
-[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_14.tres" id="17_kqo3c"]
-[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_15.tres" id="18_478dg"]
+[ext_resource type="Resource" uid="uid://cxw8v0shn25du" path="res://Data/LevelDefinitions/LevelDefinition_13.tres" id="16_51haf"]
+[ext_resource type="Resource" uid="uid://doegkjlu8ln1v" path="res://Data/LevelDefinitions/LevelDefinition_14.tres" id="17_kqo3c"]
+[ext_resource type="Resource" uid="uid://b8bkgo4fhccue" path="res://Data/LevelDefinitions/LevelDefinition_15.tres" id="18_478dg"]
+[ext_resource type="Resource" uid="uid://be27ckm8v3637" path="res://Data/LevelDefinitions/LevelDefinition_16.tres" id="21_u3qhl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p12xi"]
 
@@ -168,6 +169,11 @@ level_definition = ExtResource("17_kqo3c")
 layout_mode = 2
 text = "Level 15"
 level_definition = ExtResource("18_478dg")
+
+[node name="ButtonLevel16" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer" instance=ExtResource("2_3cqf5")]
+layout_mode = 2
+text = "Level 16"
+level_definition = ExtResource("21_u3qhl")
 
 [node name="Footer" type="CenterContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
