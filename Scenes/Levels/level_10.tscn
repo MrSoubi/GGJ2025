@@ -1,8 +1,13 @@
-[gd_scene load_steps=7 format=4 uid="uid://cc2bu6renlrax"]
+[gd_scene load_steps=12 format=4 uid="uid://cc2bu6renlrax"]
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_uuith"]
-[ext_resource type="PackedScene" uid="uid://dffrbyrblyasr" path="res://Scenes/Props/classic_spike.tscn" id="2_m6jjl"]
+[ext_resource type="PackedScene" uid="uid://brsf38c8e48lb" path="res://Scenes/Props/Damagers/Ronces/curved_ronces.tscn" id="2_xgcie"]
 [ext_resource type="TileSet" uid="uid://b4swxwaj7usof" path="res://TileSets/tile_set_mossy.tres" id="3_67cdt"]
+[ext_resource type="PackedScene" uid="uid://p108np6pjno2" path="res://Scenes/Props/Damagers/Ronces/ronce_2.tscn" id="3_l1qly"]
+[ext_resource type="PackedScene" uid="uid://soi5ct6608f7" path="res://Scenes/Props/Damagers/Ronces/ronce_3.tscn" id="4_eqr1n"]
+[ext_resource type="PackedScene" uid="uid://fxasstga1onm" path="res://Scenes/Props/Damagers/Ronces/ronce_4.tscn" id="5_563fv"]
+[ext_resource type="PackedScene" uid="uid://diy4a2qk6ed42" path="res://Scenes/Props/Damagers/Ronces/ronce_1.tscn" id="6_pacya"]
+[ext_resource type="PackedScene" uid="uid://ddggucyqrmqss" path="res://Scenes/Props/Blockers/box_1.tscn" id="7_01jrn"]
 
 [sub_resource type="Animation" id="Animation_u6jim"]
 length = 0.001
@@ -71,25 +76,70 @@ _data = {
 [node name="Node2D" type="Node2D" parent="Props" index="0"]
 position = Vector2(0, 158)
 
-[node name="ClassicSpike3" parent="Props/Node2D" index="0" instance=ExtResource("2_m6jjl")]
-position = Vector2(1084, 1025)
-rotation = -3.14159
-scale = Vector2(9.26211, -8.62608)
+[node name="Ronce" parent="Props/Node2D" index="0" instance=ExtResource("2_xgcie")]
+position = Vector2(245, 960)
+rotation = -1.309
 
-[node name="ClassicSpike" parent="Props/Node2D" index="1" instance=ExtResource("2_m6jjl")]
-position = Vector2(507, 1189)
-rotation = -3.14159
-scale = Vector2(18.0621, -8.62608)
+[node name="Ronce2" parent="Props/Node2D" index="1" instance=ExtResource("2_xgcie")]
+position = Vector2(953, 889)
+rotation = -1.46685
 
-[node name="ClassicSpike4" parent="Props/Node2D" index="2" instance=ExtResource("2_m6jjl")]
-position = Vector2(1084, -485)
-rotation = -3.14159
-scale = Vector2(9.26211, -8.62608)
+[node name="Ronce3" parent="Props/Node2D" index="2" instance=ExtResource("2_xgcie")]
+position = Vector2(1406, 867)
+rotation = -1.46685
 
-[node name="ClassicSpike2" parent="Props/Node2D" index="3" instance=ExtResource("2_m6jjl")]
-position = Vector2(507, -666)
+[node name="Ronce4" parent="Props/Node2D" index="3" instance=ExtResource("2_xgcie")]
+position = Vector2(597, -431)
+rotation = 1.83259
+
+[node name="Ronce5" parent="Props/Node2D" index="4" instance=ExtResource("2_xgcie")]
+position = Vector2(-524, -337)
+rotation = 1.57079
+
+[node name="Ronce6" parent="Props/Node2D" index="5" instance=ExtResource("2_xgcie")]
+position = Vector2(-23, -359)
+rotation = 1.57079
+
+[node name="Ronce7" parent="Props/Node2D" index="6" instance=ExtResource("3_l1qly")]
+position = Vector2(603, -457)
+rotation = 2.87979
+scale = Vector2(0.517818, 0.517818)
+
+[node name="Ronce8" parent="Props/Node2D" index="7" instance=ExtResource("3_l1qly")]
+position = Vector2(1341, 944)
+rotation = 6.63033
+scale = Vector2(0.517818, 0.517818)
+
+[node name="Ronce9" parent="Props/Node2D" index="8" instance=ExtResource("4_eqr1n")]
+position = Vector2(1298, -610)
 rotation = -3.14159
-scale = Vector2(18.0621, -8.62608)
+scale = Vector2(0.697618, 0.697618)
+
+[node name="Ronce10" parent="Props/Node2D" index="9" instance=ExtResource("5_563fv")]
+position = Vector2(746, 1159)
+rotation = -0.116706
+scale = Vector2(0.682175, 0.682175)
+
+[node name="Ronce11" parent="Props/Node2D" index="10" instance=ExtResource("6_pacya")]
+position = Vector2(859, -659)
+rotation = 2.87979
+
+[node name="Ronce12" parent="Props/Node2D" index="11" instance=ExtResource("6_pacya")]
+position = Vector2(1429, -668)
+rotation = 2.87979
+
+[node name="Ronce13" parent="Props/Node2D" index="12" instance=ExtResource("6_pacya")]
+position = Vector2(950, 1209)
+
+[node name="Blocker" parent="Props/Node2D" index="13" instance=ExtResource("7_01jrn")]
+position = Vector2(503, -722)
+rotation = -1.57079
+scale = Vector2(3.35771, 2.23991)
+
+[node name="Blocker2" parent="Props/Node2D" index="14" instance=ExtResource("7_01jrn")]
+position = Vector2(503, 1231)
+rotation = -1.57079
+scale = Vector2(3.35771, 2.23991)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Props" index="1"]
 libraries = {
@@ -100,41 +150,53 @@ autoplay = "UpDownSpikes"
 [node name="Node2D2" type="Node2D" parent="Props" index="2"]
 position = Vector2(62, 64)
 
-[node name="ClassicSpike2" parent="Props/Node2D2" index="0" instance=ExtResource("2_m6jjl")]
-position = Vector2(2038, -1988)
-rotation = -0.261799
-scale = Vector2(4.75562, 8.97958)
+[node name="Ronce" parent="Props/Node2D2" index="0" instance=ExtResource("2_xgcie")]
+position = Vector2(2085, -664)
 
-[node name="ClassicSpike3" parent="Props/Node2D2" index="1" instance=ExtResource("2_m6jjl")]
-position = Vector2(2056, -1149)
-rotation = 0.261799
-scale = Vector2(4.75562, 8.97958)
+[node name="Ronce2" parent="Props/Node2D2" index="1" instance=ExtResource("2_xgcie")]
+position = Vector2(2075, -1668)
 
-[node name="ClassicSpike8" parent="Props/Node2D2" index="2" instance=ExtResource("2_m6jjl")]
-position = Vector2(1860, -1104)
-scale = Vector2(4.75562, 8.97958)
+[node name="Ronce3" parent="Props/Node2D2" index="2" instance=ExtResource("2_xgcie")]
+position = Vector2(2198, -1154)
+rotation = 0.0301741
 
-[node name="ClassicSpike9" parent="Props/Node2D2" index="3" instance=ExtResource("2_m6jjl")]
-position = Vector2(1618, -1965)
-scale = Vector2(4.75562, 8.97958)
+[node name="Ronce4" parent="Props/Node2D2" index="3" instance=ExtResource("2_xgcie")]
+position = Vector2(3230, -1977)
+rotation = 3.14159
 
-[node name="ClassicSpike4" parent="Props/Node2D2" index="4" instance=ExtResource("2_m6jjl")]
-position = Vector2(3144, -1936)
-rotation = -0.261799
-scale = Vector2(4.75562, 8.97958)
+[node name="Ronce6" parent="Props/Node2D2" index="4" instance=ExtResource("2_xgcie")]
+position = Vector2(3135, -1416)
+rotation = 3.14159
 
-[node name="ClassicSpike6" parent="Props/Node2D2" index="5" instance=ExtResource("2_m6jjl")]
-position = Vector2(3474, -1974)
-scale = Vector2(4.75562, 8.97958)
+[node name="Ronce7" parent="Props/Node2D2" index="5" instance=ExtResource("2_xgcie")]
+position = Vector2(3125, -2382)
+rotation = 3.14159
+scale = Vector2(1.16, 1)
 
-[node name="ClassicSpike7" parent="Props/Node2D2" index="6" instance=ExtResource("2_m6jjl")]
-position = Vector2(3474, -1053)
-scale = Vector2(4.75562, 8.97958)
+[node name="Ronce5" parent="Props/Node2D2" index="6" instance=ExtResource("5_563fv")]
+position = Vector2(3539, -1275)
+rotation = -2.35619
 
-[node name="ClassicSpike5" parent="Props/Node2D2" index="7" instance=ExtResource("2_m6jjl")]
-position = Vector2(3162, -1097)
-rotation = 0.261799
-scale = Vector2(4.75562, 8.97958)
+[node name="Ronce8" parent="Props/Node2D2" index="7" instance=ExtResource("4_eqr1n")]
+position = Vector2(3208, -2105)
+rotation = -1.0472
+scale = Vector2(0.582871, 0.582871)
+
+[node name="Blocker" parent="Props/Node2D2" index="8" instance=ExtResource("7_01jrn")]
+position = Vector2(1825, -1543)
+scale = Vector2(2.46456, 1.98456)
+
+[node name="Blocker2" parent="Props/Node2D2" index="9" instance=ExtResource("7_01jrn")]
+position = Vector2(3547, -1524)
+scale = Vector2(2.46456, 1.98456)
+
+[node name="Ronce" parent="Props" index="3" instance=ExtResource("2_xgcie")]
+position = Vector2(3440, 216)
+rotation = -2.09439
+
+[node name="Ronce2" parent="Props" index="4" instance=ExtResource("2_xgcie")]
+position = Vector2(2159, -2699)
+rotation = 0.785397
 
 [node name="LevelGoal" parent="." index="2"]
 position = Vector2(6047, -2611)
