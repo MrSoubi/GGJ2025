@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dyrhu210phwla"]
+[gd_scene load_steps=19 format=3 uid="uid://dyrhu210phwla"]
 
 [ext_resource type="Script" path="res://Scripts/UI/level_selection.gd" id="1_6qj4i"]
 [ext_resource type="PackedScene" uid="uid://cxw3spahdcohl" path="res://Scenes/UI/button_level.tscn" id="2_3cqf5"]
@@ -15,6 +15,9 @@
 [ext_resource type="Resource" uid="uid://bu3et2wi1d10q" path="res://Data/LevelDefinitions/LevelDefinition_10.tres" id="13_icpu6"]
 [ext_resource type="Resource" uid="uid://bovm0s1m8kie4" path="res://Data/LevelDefinitions/LevelDefinition_11.tres" id="14_kxk1p"]
 [ext_resource type="Resource" uid="uid://g1yyisuop76l" path="res://Data/LevelDefinitions/LevelDefinition_12.tres" id="15_fjkl2"]
+[ext_resource type="Resource" uid="uid://cxw8v0shn25du" path="res://Data/LevelDefinitions/LevelDefinition_13.tres" id="16_51haf"]
+[ext_resource type="Resource" uid="uid://doegkjlu8ln1v" path="res://Data/LevelDefinitions/LevelDefinition_14.tres" id="17_kqo3c"]
+[ext_resource type="Resource" uid="uid://b8bkgo4fhccue" path="res://Data/LevelDefinitions/LevelDefinition_15.tres" id="18_478dg"]
 
 [node name="LevelSelection" type="CanvasLayer"]
 process_mode = 3
@@ -61,7 +64,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 50
 theme_override_constants/v_separation = 50
-columns = 4
+columns = 5
 script = ExtResource("2_bcfnv")
 
 [node name="ButtonLevel" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer" instance=ExtResource("2_3cqf5")]
@@ -122,6 +125,21 @@ level_definition = ExtResource("14_kxk1p")
 layout_mode = 2
 text = "Level 12"
 level_definition = ExtResource("15_fjkl2")
+
+[node name="ButtonLevel13" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer" instance=ExtResource("2_3cqf5")]
+layout_mode = 2
+text = "Level 13"
+level_definition = ExtResource("16_51haf")
+
+[node name="ButtonLevel14" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer" instance=ExtResource("2_3cqf5")]
+layout_mode = 2
+text = "Level 14"
+level_definition = ExtResource("17_kqo3c")
+
+[node name="ButtonLevel15" parent="TextureRect/MarginContainer/VBoxContainer/MarginContainer/GridContainer" instance=ExtResource("2_3cqf5")]
+layout_mode = 2
+text = "Level 15"
+level_definition = ExtResource("18_478dg")
 
 [node name="Footer" type="CenterContainer" parent="TextureRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
