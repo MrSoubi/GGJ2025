@@ -5,6 +5,7 @@ extends Node
 @onready var pause_menu: CanvasLayer = $PauseMenu
 @onready var level_instance: Node = $Levels
 @onready var transition_layer: Fader = $TransitionLayer
+@onready var team_bubbles: Node2D = $TeamBubbles
 
 @export var levels : Array[LevelDefinition]
 
@@ -37,6 +38,10 @@ func enable_main_menu() -> void:
 	level_selection.visible = false
 	pause_menu.visible = false
 	get_tree().paused = true
+	
+	team_bubbles.visible = true
+	team_bubbles.process_mode = Node.PROCESS_MODE_ALWAYS
+	
 
 func restart_level():
 	transition_layer.transition()
@@ -52,6 +57,9 @@ func enable_level_selection_menu() -> void:
 	level_selection.visible = true
 	pause_menu.visible = false
 	get_tree().paused = true
+	
+	team_bubbles.visible = false
+	team_bubbles.process_mode = Node.PROCESS_MODE_DISABLED
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel") and not main_menu.visible and not level_selection.visible:
@@ -100,6 +108,9 @@ func start_level(level : LevelDefinition):
 	current_level = level.level.instantiate()
 	level_instance.add_child(current_level)
 	RSE_LEVEL_START.triggered.emit()
+	
+	team_bubbles.visible = false
+	team_bubbles.process_mode = Node.PROCESS_MODE_DISABLED
 
 func _on_main_menu_button_exit_pressed() -> void:
 	get_tree().quit()

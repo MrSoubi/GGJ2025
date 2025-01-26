@@ -10,13 +10,13 @@
 [ext_resource type="Resource" uid="uid://drhxe8x7smwg1" path="res://Data/LevelDefinitions/LevelDefinition_3.tres" id="5_rmitb"]
 [ext_resource type="Resource" uid="uid://cytihvogyojqw" path="res://Data/LevelDefinitions/LevelDefinition_4.tres" id="6_1vm4i"]
 [ext_resource type="Resource" uid="uid://b58o2yon57swk" path="res://Data/LevelDefinitions/LevelDefinition_5.tres" id="7_xriwq"]
-[ext_resource type="Resource" uid="uid://g15khqqiv6ll" path="res://Data/LevelDefinitions/LevelDefinition_6.tres" id="8_va1s3"]
-[ext_resource type="Resource" uid="uid://cs7mcqlxqblug" path="res://Data/LevelDefinitions/LevelDefinition_7.tres" id="9_byw7l"]
-[ext_resource type="Resource" uid="uid://6ddx8saboed1" path="res://Data/LevelDefinitions/LevelDefinition_8.tres" id="10_pqhab"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_6.tres" id="8_va1s3"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_7.tres" id="9_byw7l"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_8.tres" id="10_pqhab"]
 [ext_resource type="Script" path="res://Scripts/UI/fader.gd" id="11_jqnl6"]
-[ext_resource type="Resource" uid="uid://c2e2hiqy3bf03" path="res://Data/LevelDefinitions/LevelDefinition_9.tres" id="11_wlila"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_9.tres" id="11_wlila"]
 [ext_resource type="Script" path="res://Scripts/music.gd" id="12_5274v"]
-[ext_resource type="Resource" uid="uid://bu3et2wi1d10q" path="res://Data/LevelDefinitions/LevelDefinition_10.tres" id="12_heyj3"]
+[ext_resource type="Resource" path="res://Data/LevelDefinitions/LevelDefinition_10.tres" id="12_heyj3"]
 [ext_resource type="AudioStream" uid="uid://bv7fkqylfcwft" path="res://Sounds/Music/ambient-soundscape-glitch-bells-276232.mp3" id="13_22oyc"]
 [ext_resource type="Resource" uid="uid://bovm0s1m8kie4" path="res://Data/LevelDefinitions/LevelDefinition_11.tres" id="13_70uwb"]
 [ext_resource type="AudioStream" uid="uid://c5yohh7tgtux3" path="res://Sounds/Music/mystical-music-54294.mp3" id="14_7lmy1"]
@@ -308,18 +308,32 @@ position = Vector2(-176.5, 551.5)
 shape = SubResource("RectangleShape2D_q1dl7")
 
 [node name="FaceBubble" parent="TeamBubbles" instance=ExtResource("21_qus44")]
+process_mode = 0
+position = Vector2(232, 156)
 
 [node name="FaceBubble2" parent="TeamBubbles" instance=ExtResource("22_8qwxy")]
+process_mode = 0
+position = Vector2(489, 119)
 
 [node name="FaceBubble3" parent="TeamBubbles" instance=ExtResource("23_ps8qk")]
+process_mode = 0
+position = Vector2(741, 127)
 
 [node name="FaceBubble4" parent="TeamBubbles" instance=ExtResource("24_mjxcx")]
+process_mode = 0
+position = Vector2(1027, 122)
 
 [node name="FaceBubble5" parent="TeamBubbles" instance=ExtResource("25_s2nf1")]
+process_mode = 0
+position = Vector2(1307, 113)
 
 [node name="FaceBubble6" parent="TeamBubbles" instance=ExtResource("26_hip5k")]
+process_mode = 0
+position = Vector2(1544, 107)
 
 [node name="FaceBubble7" parent="TeamBubbles" instance=ExtResource("27_61vcb")]
+process_mode = 0
+position = Vector2(1768, 122)
 
 [node name="Music" type="Node" parent="."]
 process_mode = 3
