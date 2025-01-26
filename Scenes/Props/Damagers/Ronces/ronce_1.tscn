@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://diy4a2qk6ed42"]
+
+[ext_resource type="PackedScene" uid="uid://cxu453rxe6nbe" path="res://Scenes/Props/Damagers/Ronces/ronce_template.tscn" id="1_xt08l"]
+
+[node name="Ronce" instance=ExtResource("1_xt08l")]
+
+[node name="CollisionPolygon2D" parent="DeathBox" index="0"]
+polygon = PackedVector2Array(30, -753, 15, -608, -50, -626, 8, -561, -2, -465, -67, -435, -12, -396, -11, -363, -101, -366, -21, -309, -34, -206, -80, -201, -38, -164, -48, -80, -102, -72, -55, -35, -54, -7, 35, -10, 38, -62, 103, -71, 44, -113, 46, -176, 98, -183, 52, -214, 53, -256, 154, -265, 56, -304, 63, -397, 126, -407, 65, -442, 63, -471, 197, -456, 71, -534, 76, -598)
+
+[editable path="DeathBox"]

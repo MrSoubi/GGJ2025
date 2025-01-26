@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxu453rxe6nbe"]
+
+[ext_resource type="Texture2D" uid="uid://cvhagrs6opkef" path="res://Textures/Ronces/ronces_spikes_1.png" id="1_is4po"]
+[ext_resource type="PackedScene" uid="uid://xdjhonflspxe" path="res://Scenes/Props/DeathBox.tscn" id="2_mny56"]
+
+[node name="Ronce" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(44, -379)
+rotation = 3.14159
+texture = ExtResource("1_is4po")
+
+[node name="DeathBox" parent="." instance=ExtResource("2_mny56")]
+
+[editable path="DeathBox"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba5u80jcgils2"]
+[gd_scene load_steps=3 format=3 uid="uid://ba5u80jcgils2"]
 
 [ext_resource type="Texture2D" uid="uid://cw5e2wyrxhq1q" path="res://icon.svg" id="1_812vv"]
 
@@ -6,17 +6,14 @@
 friction = 0.0
 bounce = 1.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t558n"]
-size = Vector2(124, 126)
-
 [node name="Blocker" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 physics_interpolation_mode = 1
 physics_material_override = SubResource("PhysicsMaterial_gtqhb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_t558n")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_812vv")

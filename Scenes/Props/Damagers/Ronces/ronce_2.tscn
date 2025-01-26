@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://p108np6pjno2"]
+
+[ext_resource type="PackedScene" uid="uid://cxu453rxe6nbe" path="res://Scenes/Props/Damagers/Ronces/ronce_template.tscn" id="1_ohwjf"]
+[ext_resource type="Texture2D" uid="uid://dbh8rg60w0jaf" path="res://Textures/Ronces/ronces_spikes_3.png" id="2_itfoh"]
+
+[node name="Ronce" instance=ExtResource("1_ohwjf")]
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource("2_itfoh")
+
+[node name="CollisionPolygon2D" parent="DeathBox" index="0"]
+polygon = PackedVector2Array(172, -1086, 129, -939, 67, -1002, 5, -871, -74, -882, -15, -829, -32, -790, -151, -784, -71, -735, -119, -653, -94, -593, -171, -556, -69, -543, -51, -507, -133, -442, -22, -447, 36, -316, -61, -262, 66, -222, -17, -4, -119, -5, -47, 59, -85, 120, -192, 120, -108, 160, -136, 208, -235, 210, -148, 263, -177, 315, 97, 324, 104, 258, 264, 247, 110, 185, 157, 89, 256, 79, 170, 14, 196, -77, 315, -105, 208, -141, 241, -223, 278, -284, 215, -285, 167, -407, 278, -459, 139, -459, 80, -597, 182, -631, 58, -665, 136, -788, 284, -800, 152, -840, 215, -932)
+
+[editable path="DeathBox"]
