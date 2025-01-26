@@ -7,4 +7,4 @@
 script = ExtResource("2_k23bb")
 index = 6
 level = ExtResource("1_ninss")
-available = true
+available = false

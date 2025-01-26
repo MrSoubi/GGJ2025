@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="LevelDefinition" load_steps=3 format=3 uid="uid://cxhom2bqc5bw"]
+[gd_resource type="Resource" script_class="LevelDefinition" load_steps=3 format=3 uid="uid://dae45a54ydnua"]
 
-[ext_resource type="PackedScene" uid="uid://dun0w32boligg" path="res://Scenes/Levels/level_end.tscn" id="1_yp2kd"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/level_end.tscn" id="1_yp2kd"]
 [ext_resource type="Script" path="res://Scripts/LevelDefinitions/level_definition.gd" id="2_4oyjk"]
 
 [resource]
 script = ExtResource("2_4oyjk")
-index = 20
+index = 17
 level = ExtResource("1_yp2kd")
-available = true
+available = false
