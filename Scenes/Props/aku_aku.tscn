@@ -5,59 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://calvaaopbtbaw" path="res://Textures/machoire.png" id="2_kpksc"]
 [ext_resource type="PackedScene" uid="uid://xdjhonflspxe" path="res://Scenes/Props/DeathBox.tscn" id="4_ce856"]
 
-[sub_resource type="Animation" id="Animation_2ljfr"]
-resource_name = "idle"
-length = 6.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Jaw:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 2, 3.06667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(10, 29), Vector2(-6, 29), Vector2(-2, -3)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Jaw:rotation")
-tracks/1/interp = 4
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5, 2, 3.06667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.426836, 0.148385, 0.3732]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Head:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Head:rotation")
-tracks/3/interp = 4
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.03333, 2.73333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, -0.143662, 0.330225]
-}
-
 [sub_resource type="Animation" id="Animation_1sheh"]
 length = 0.001
 tracks/0/type = "value"
@@ -161,6 +108,59 @@ tracks/3/keys = {
 "values": [0.0, -0.462542, 6.59782]
 }
 
+[sub_resource type="Animation" id="Animation_2ljfr"]
+resource_name = "idle"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jaw:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2, 3.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(10, 29), Vector2(-6, 29), Vector2(-2, -3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Jaw:rotation")
+tracks/1/interp = 4
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 2, 3.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.426836, 0.148385, 0.3732]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head:rotation")
+tracks/3/interp = 4
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.03333, 2.73333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.143662, 0.330225]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6sdrm"]
 _data = {
 "RESET": SubResource("Animation_1sheh"),
@@ -169,7 +169,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fkk5i"]
-radius = 314.916
+radius = 4158.05
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ykqqa"]
 radius = 14.0357

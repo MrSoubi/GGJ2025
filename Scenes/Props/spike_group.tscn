@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://du7p5xhomhyrq"]
+
+[ext_resource type="PackedScene" uid="uid://depirikxh0cpf" path="res://Scenes/Props/Damagers/Spikes/spike_red.tscn" id="1_f6vu3"]
+
+[node name="SpikeGroup" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_f6vu3")]
+position = Vector2(0, 0)
+
+[node name="Node2D2" parent="." instance=ExtResource("1_f6vu3")]
+position = Vector2(166, 0)
+
+[node name="Node2D3" parent="." instance=ExtResource("1_f6vu3")]
+position = Vector2(334, 0)
+
+[node name="Node2D4" parent="." instance=ExtResource("1_f6vu3")]
+position = Vector2(499, 0)
