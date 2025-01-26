@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://buyshvrbcf8jx"]
+
+[ext_resource type="Texture2D" uid="uid://0pguo7th4qs8" path="res://Textures/chaudron.png" id="1_emyxd"]
+[ext_resource type="Script" path="res://Scenes/Levels/chaudron_teammate.gd" id="2_1bceg"]
+[ext_resource type="FontFile" uid="uid://c0ymilsqh56kj" path="res://Wonderly.otf" id="3_aar7g"]
+[ext_resource type="AudioStream" uid="uid://d4j2nvlmjvmry" path="res://Sounds/SFX/Pianoroll_Win.wav" id="4_bugee"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_prs86"]
+radius = 513.297
+
+[node name="ChaudronTeamate" type="Sprite2D"]
+position = Vector2(-2929, 895)
+scale = Vector2(0.581113, 0.581113)
+texture = ExtResource("1_emyxd")
+script = ExtResource("2_1bceg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -86.0414
+offset_top = -30.975
+offset_right = 113.959
+offset_bottom = 69.025
+theme_override_fonts/font = ExtResource("3_aar7g")
+theme_override_font_sizes/font_size = 60
+text = "Thomy"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_prs86")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bugee")
+bus = &"SFX"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
