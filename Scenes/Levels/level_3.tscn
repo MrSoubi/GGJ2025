@@ -59,10 +59,10 @@ position = Vector2(2296, 65)
 [node name="Blocker2" parent="Props/Node2D" index="1" instance=ExtResource("2_el3i3")]
 position = Vector2(2296, 1462)
 
-[node name="LevelGoal" parent="." index="3"]
+[node name="LevelGoal" parent="." index="2"]
 position = Vector2(2598, 727)
 
-[node name="BubbleSpawner" parent="." index="4"]
+[node name="BubbleSpawner" parent="." index="3"]
 position = Vector2(365, 506)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="6"]

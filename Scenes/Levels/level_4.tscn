@@ -10,10 +10,10 @@
 position = Vector2(-893, 587)
 scale = Vector2(0.76664, 0.76664)
 
-[node name="LevelGoal" parent="." index="3"]
+[node name="LevelGoal" parent="." index="2"]
 position = Vector2(1386, 728)
 
-[node name="BubbleSpawner" parent="." index="4"]
+[node name="BubbleSpawner" parent="." index="3"]
 position = Vector2(444, 825)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="6"]

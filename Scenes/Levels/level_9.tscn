@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_5djyj"]
 [ext_resource type="TileSet" uid="uid://b4swxwaj7usof" path="res://TileSets/tile_set_mossy.tres" id="2_ohjwi"]
-[ext_resource type="PackedScene" uid="uid://dffrbyrblyasr" path="res://Scenes/Props/classic_spike.tscn" id="3_3u1kt"]
-[ext_resource type="PackedScene" uid="uid://ba5u80jcgils2" path="res://Scenes/Props/Blockers/blocker_template.tscn" id="3_6vn0y"]
+[ext_resource type="PackedScene" uid="uid://csqedgloh6rja" path="res://Scenes/Props/Blockers/box_4.tscn" id="5_1gcf6"]
+[ext_resource type="PackedScene" uid="uid://du7p5xhomhyrq" path="res://Scenes/Props/spike_group.tscn" id="6_24d4c"]
 
 [sub_resource type="Animation" id="Animation_ax16w"]
 resource_name = "BigWallAnim"
@@ -48,13 +48,25 @@ _data = {
 [node name="Node2D" type="Node2D" parent="Props" index="0"]
 position = Vector2(0, 112)
 
-[node name="Blocker" parent="Props/Node2D" index="0" instance=ExtResource("3_6vn0y")]
-position = Vector2(780, -614)
-scale = Vector2(27.28, 6.84)
+[node name="SpikeGroup" parent="Props/Node2D" index="0" instance=ExtResource("6_24d4c")]
+position = Vector2(38, -122)
+rotation = -3.14159
+scale = Vector2(1.68, 1.68)
 
-[node name="ClassicSpike" parent="Props/Node2D" index="1" instance=ExtResource("3_3u1kt")]
-position = Vector2(785, -134)
-scale = Vector2(27, 1)
+[node name="SpikeGroup2" parent="Props/Node2D" index="1" instance=ExtResource("6_24d4c")]
+position = Vector2(1188, -122)
+rotation = -3.14159
+scale = Vector2(1.68, 1.68)
+
+[node name="SpikeGroup3" parent="Props/Node2D" index="2" instance=ExtResource("6_24d4c")]
+position = Vector2(2349, -122)
+rotation = -3.14159
+scale = Vector2(1.68, 1.68)
+
+[node name="Blocker2" parent="Props/Node2D" index="3" instance=ExtResource("5_1gcf6")]
+position = Vector2(775, -625)
+rotation = -1.57079
+scale = Vector2(3.04, 3.4)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Props" index="1"]
 libraries = {
@@ -62,7 +74,7 @@ libraries = {
 }
 autoplay = "BigWallAnim"
 
-[node name="LevelGoal" parent="." index="3"]
+[node name="LevelGoal" parent="." index="2"]
 position = Vector2(4887, 559)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="6"]

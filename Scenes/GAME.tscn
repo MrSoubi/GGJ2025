@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cnj5ko8x6ace8"]
+[gd_scene load_steps=44 format=3 uid="uid://cnj5ko8x6ace8"]
 
 [ext_resource type="Script" path="res://Scripts/game_initializer.gd" id="1_hfhqi"]
 [ext_resource type="Script" path="res://Scripts/LevelDefinitions/level_definition.gd" id="2_8rtuw"]
@@ -25,6 +25,7 @@
 [ext_resource type="Resource" uid="uid://cxw8v0shn25du" path="res://Data/LevelDefinitions/LevelDefinition_13.tres" id="15_gqd50"]
 [ext_resource type="Resource" uid="uid://doegkjlu8ln1v" path="res://Data/LevelDefinitions/LevelDefinition_14.tres" id="16_aynka"]
 [ext_resource type="Resource" uid="uid://b8bkgo4fhccue" path="res://Data/LevelDefinitions/LevelDefinition_15.tres" id="17_n5t8c"]
+[ext_resource type="Resource" uid="uid://be27ckm8v3637" path="res://Data/LevelDefinitions/LevelDefinition_16.tres" id="18_3kdfl"]
 [ext_resource type="PackedScene" uid="uid://b3ycc6uiruc7s" path="res://Misc/Axelle.tscn" id="21_qus44"]
 [ext_resource type="PackedScene" uid="uid://1alyatohm5cf" path="res://Misc/Baptiste.tscn" id="22_8qwxy"]
 [ext_resource type="PackedScene" uid="uid://daos25y64fhnq" path="res://Misc/Eliot.tscn" id="23_ps8qk"]
@@ -243,7 +244,7 @@ _data = {
 [node name="Node" type="Node"]
 process_mode = 3
 script = ExtResource("1_hfhqi")
-levels = Array[ExtResource("2_8rtuw")]([ExtResource("3_vkcrv"), ExtResource("4_sesib"), ExtResource("5_rmitb"), ExtResource("6_1vm4i"), ExtResource("7_xriwq"), ExtResource("8_va1s3"), ExtResource("9_byw7l"), ExtResource("10_pqhab"), ExtResource("11_wlila"), ExtResource("12_heyj3"), ExtResource("13_70uwb"), ExtResource("14_y3dyn"), ExtResource("15_gqd50"), ExtResource("16_aynka"), ExtResource("17_n5t8c")])
+levels = Array[ExtResource("2_8rtuw")]([ExtResource("3_vkcrv"), ExtResource("4_sesib"), ExtResource("5_rmitb"), ExtResource("6_1vm4i"), ExtResource("7_xriwq"), ExtResource("8_va1s3"), ExtResource("9_byw7l"), ExtResource("10_pqhab"), ExtResource("11_wlila"), ExtResource("12_heyj3"), ExtResource("13_70uwb"), ExtResource("14_y3dyn"), ExtResource("15_gqd50"), ExtResource("16_aynka"), ExtResource("17_n5t8c"), ExtResource("18_3kdfl")])
 
 [node name="Levels" type="Node" parent="."]
 process_mode = 1

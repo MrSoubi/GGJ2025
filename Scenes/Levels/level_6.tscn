@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6tpbfe7iim2i" path="res://Scenes/Levels/level_template.tscn" id="1_lg7ht"]
 [ext_resource type="PackedScene" uid="uid://djvsmqq3gs1y3" path="res://Scenes/Props/ventilateur.tscn" id="2_xos81"]
-[ext_resource type="PackedScene" uid="uid://dffrbyrblyasr" path="res://Scenes/Props/classic_spike.tscn" id="3_kmnx8"]
+[ext_resource type="PackedScene" uid="uid://du7p5xhomhyrq" path="res://Scenes/Props/spike_group.tscn" id="3_dk14i"]
 [ext_resource type="TileSet" uid="uid://b4swxwaj7usof" path="res://TileSets/tile_set_mossy.tres" id="4_0bsf0"]
 
 [node name="Level" instance=ExtResource("1_lg7ht")]
@@ -22,14 +22,15 @@ position = Vector2(-694, 454)
 rotation = -1.5708
 scale = Vector2(6.48, 1)
 
-[node name="ClassicSpike" parent="Props" index="3" instance=ExtResource("3_kmnx8")]
-position = Vector2(-821, -12)
-scale = Vector2(9.96, 1)
+[node name="SpikeGroup" parent="Props" index="3" instance=ExtResource("3_dk14i")]
+position = Vector2(-326, -24)
+rotation = -3.14159
+scale = Vector2(1.84, 1.57044)
 
-[node name="LevelGoal" parent="." index="3"]
+[node name="LevelGoal" parent="." index="2"]
 position = Vector2(1581, 732)
 
-[node name="BubbleSpawner" parent="." index="4"]
+[node name="BubbleSpawner" parent="." index="3"]
 position = Vector2(513, 612)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="6"]
